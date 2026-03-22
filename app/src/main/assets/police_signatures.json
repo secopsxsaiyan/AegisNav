@@ -1,0 +1,104 @@
+{
+  "version": 3,
+  "note": "Police equipment signatures. BLE: 16-bit service UUIDs (advertised). WiFi: OUI prefixes (BSSID first 3 bytes). Confidence tiers: 1.0 (100%), 0.75, 0.50, 0.25. Alert threshold: 0.5. OUIs apply to both WiFi BSSID and BLE MAC prefix.",
+
+  "ble_service_uuids": {
+    "0000fc81-0000-1000-8000-00805f9b34fb": { "label": "AXON",   "confidence": 1.0 },
+    "0000fe6b-0000-1000-8000-00805f9b34fb": { "label": "TASER",  "confidence": 1.0 },
+    "0000fe6c-0000-1000-8000-00805f9b34fb": { "label": "TASER",  "confidence": 1.0 },
+    "0000034d-0000-1000-8000-00805f9b34fb": { "label": "TASER",  "confidence": 1.0 },
+    "0000fc6d-0000-1000-8000-00805f9b34fb": { "label": "MOTIVE", "confidence": 0.50 },
+    "0000fc70-0000-1000-8000-00805f9b34fb": { "label": "MOTIVE", "confidence": 0.50 },
+    "0000036e-0000-1000-8000-00805f9b34fb": { "label": "MOTIVE", "confidence": 0.50 }
+  },
+
+  "ble_service_uuids_short": {
+    "fc81": { "label": "AXON",   "confidence": 1.0 },
+    "fe6b": { "label": "TASER",  "confidence": 1.0 },
+    "fe6c": { "label": "TASER",  "confidence": 1.0 },
+    "034d": { "label": "TASER",  "confidence": 1.0 },
+    "fc6d": { "label": "MOTIVE", "confidence": 0.50 },
+    "fc70": { "label": "MOTIVE", "confidence": 0.50 },
+    "036e": { "label": "MOTIVE", "confidence": 0.50 }
+  },
+
+  "wifi_oui_100": {
+    "00:C0:D4": "AXON",
+    "00:25:DF": "AXON",
+    "00:58:28": "AXON",
+    "84:70:03": "AXON"
+  },
+
+  "wifi_oui_75": {
+    "00:30:44": "CRADLEPOINT"
+  },
+
+  "wifi_oui_50": {
+    "00:E0:1C": "CRADLEPOINT",
+    "C4:A5:59": "MOTIVE",
+    "E0:DA:DC": "KENWOOD",
+    "00:0D:4F": "KENWOOD",
+    "00:23:BD": "DIGITAL_ALLY",
+    "00:01:21": "WATCHGUARD",
+    "00:90:7F": "WATCHGUARD",
+    "00:1D:96": "WATCHGUARD"
+  },
+
+  "wifi_oui_25": {
+    "4C:CC:34": "MOTOROLA_SOLUTIONS",
+    "00:18:85": "MOTOROLA_SOLUTIONS",
+    "00:1F:92": "MOTOROLA_SOLUTIONS",
+    "00:04:7D": "MOTOROLA_SOLUTIONS",
+    "00:24:92": "MOTOROLA_SOLUTIONS",
+    "10:74:6F": "MOTOROLA_SOLUTIONS",
+    "B8:E2:8C": "MOTOROLA_SOLUTIONS",
+    "50:13:9D": "CELLULAR_MDT",
+    "84:DB:2F": "CELLULAR_MDT",
+    "64:CE:6E": "CELLULAR_MDT",
+    "CC:93:4A": "CELLULAR_MDT",
+    "00:A0:D5": "CELLULAR_MDT",
+    "28:A3:31": "CELLULAR_MDT",
+    "00:15:FF": "CELLULAR_MDT",
+    "28:80:A2": "CELLULAR_MDT",
+    "18:EE:86": "CELLULAR_MDT",
+    "E0:86:14": "CELLULAR_MDT",
+    "78:0C:71": "CELLULAR_MDT"
+  },
+
+  "ble_device_name_patterns": [
+    "Axon",
+    "AXON",
+    "DigitalAlly",
+    "APX",
+    "TASER",
+    "Taser"
+  ],
+
+  "wifi_ssid_patterns": [
+    "Axon_",
+    "AXON_",
+    "axon_evidence",
+    "Axon Evidence",
+    "EVIDENCE_",
+    "TASER_",
+    "CradlePoint",
+    "CZW",
+    "MDT_",
+    "PSAP_",
+    "CAD_NET"
+  ],
+
+  "wifi_ssid_labels": {
+    "Axon_":         "AXON",
+    "AXON_":         "AXON",
+    "axon_evidence": "AXON",
+    "Axon Evidence": "AXON",
+    "EVIDENCE_":     "AXON",
+    "TASER_":        "TASER",
+    "CradlePoint":   "CRADLEPOINT",
+    "CZW":           "CRADLEPOINT",
+    "MDT_":          "CELLULAR_MDT",
+    "PSAP_":         "UNKNOWN_LE",
+    "CAD_NET":       "UNKNOWN_LE"
+  }
+}

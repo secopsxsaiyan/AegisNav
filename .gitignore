@@ -1,0 +1,66 @@
+# ── Build outputs ─────────────────────────────────────────────────────────────
+/build/
+app/build/
+.gradle/
+*.apk
+*.aab
+*.ap_
+
+# ── Android Studio / IntelliJ ─────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# ── Gradle wrapper jar (generated; download separately) ───────────────────────
+gradle/wrapper/gradle-wrapper.jar
+
+# ── Signing keys (NEVER commit) ───────────────────────────────────────────────
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
+release.properties
+
+# ── Large data files (sideloaded; not VCS material) ──────────────────────────
+# Map tiles
+*.pmtiles
+*.mbtiles
+# Offline geocoder databases
+files/geocoder/
+*_geocoder.db
+# GraphHopper routing graphs (data dirs, not source code)
+/routing/
+files/routing/
+# Raw OSM source data
+*-latest.osm.pbf
+*.osm.bz2
+*.osm.gz
+
+# ── SDK / local machine config ────────────────────────────────────────────────
+local.properties
+
+# ── OS / environment ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logcat*.txt
+
+# ── Dev-only directories (should not exist in release) ───────────────────────
+tools/
+scripts/
+backend/
+.gitea/
+.pre-commit-config.yaml
+app/src/test/
+app/src/androidTest/
+data/
+security-reports/

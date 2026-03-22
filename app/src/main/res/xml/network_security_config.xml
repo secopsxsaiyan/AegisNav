@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Network Security Configuration — AegisNav
+    SEC-FIX: Explicitly block cleartext HTTP traffic and restrict trust anchors
+    to the system CA store. No debug overrides are enabled.
+    Note: Certificate pinning for P2P relay (relay.aegisnav.com) is deferred
+    until a stable TLS cert rotation procedure is in place; HPKP mismatch
+    would lock users out. Track as issue #SEC-PIN-001.
+-->
+<network-security-config>
+    <!-- Block all cleartext (http://) traffic for every domain. -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
