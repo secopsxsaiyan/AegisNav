@@ -1,0 +1,21 @@
+                  
+                  
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+                                    
+    app/src/main/AndroidManifest.xml
+    ❯❱ java.android.security.exported_activity.exported_activity
+          The application exports an activity. Any application on the device can launch the exported activity
+          which may compromise the integrity of your application or its data.  Ensure that any exported      
+          activities do not have privileged access to your application's control plane.                      
+          Details: https://sg.run/eNGZ                                                                       
+                                                                                                             
+           64┆ <activity
+           65┆     android:name=".MainActivity"
+           66┆     android:exported="true"
+           67┆     android:windowSoftInputMode="adjustResize"
+           68┆     android:theme="@style/Theme.AegisNav"
+           69┆     tools:targetApi="31">
+           70┆     <intent-filter>
+           71┆         <action android:name="android.intent.action.MAIN" />

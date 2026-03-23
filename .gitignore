@@ -1,0 +1,87 @@
+# ── Build outputs ────────────────────────────────────────────────────────────
+/build/
+app/build/
+.gradle/
+local.properties
+*.apk
+*.aab
+*.ap_
+
+# ── Android Studio / IntelliJ ─────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# ── Gradle wrapper jar (generated; not source) ───────────────────────────────
+gradle/wrapper/gradle-wrapper.jar
+
+# ── Signing keys (NEVER commit keystores) ────────────────────────────────────
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
+release.properties
+
+# ── Large data files (sideloaded; not VCS material) ──────────────────────────
+# Map tiles
+*.pmtiles
+*.mbtiles
+# Offline geocoder databases
+*_geocoder.db
+geocoder/*.db
+# GraphHopper routing graphs (device data dir, not source code)
+/routing/
+/tools/routing/
+files/routing/
+# Raw OSM / source data (note: assets/glyphs/*.pbf are font tiles, kept in repo)
+*-latest.osm.pbf
+*.osm.bz2
+*.osm.gz
+
+# ── Tool-generated outputs (internal pipeline scripts, not for contributors) ──
+tools/data/
+tools/sources/
+tools/tmp/
+tools/*.log
+tools/alpr_pipeline.py
+tools/alpr_pipeline.sh
+tools/generate_assets.sh
+tools/generate_tiles.sh
+generate_tiles.log
+
+# ── SDK / local machine config (never commit) ────────────────────────────────
+local.properties
+
+# ── OS / environment ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logcat*.txt
+
+# ── Project management (internal notes, not for contributors) ────────────────
+STATE.md
+HEARTBEAT.md
+progress-log.md
+ROADMAP.md
+
+# Build tool JARs (download separately; see tools/README.md)
+tools/lib/*.jar
+STATE/
+
+# Dev artifact — partial TN test data, not a production asset
+app/src/main/assets/alpr_tn.geojson
+
+# Security audit reports are tracked in dev (see security-reports/)
+# but MUST be excluded from release mirror via release .gitignore
+tools/output/*.zip
+tools/output_old/
+tools/output/

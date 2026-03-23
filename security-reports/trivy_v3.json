@@ -1,0 +1,180 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.69.3"
+  },
+  "ReportID": "019cef9f-af6a-7d6f-bb82-68f819725665",
+  "CreatedAt": "2026-03-14T23:52:25.706882932-04:00",
+  "ArtifactID": "sha256:cdaa4e1e5e3cbfd2bf179f348a62eb7887945fc5eee6f985da40a86044c860c3",
+  "ArtifactName": ".",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://tea.pasubis.com/o4o793uys/dev-AegisNav.git",
+    "Branch": "main",
+    "Commit": "a79d2da0610fbbf178d8b2e19ec0ef9c5e71c266",
+    "CommitMsg": "Add verdict locking for police detection popups (per officer unit)\n\nTrack confirm/dismiss tap counts on officer_units table. After 3\nconsecutive identical user selections (confirm or dismiss), lock the\nverdict permanently — that unit's sightings never re-queue.\n\nAuto-expire (15s timeout with no user action) does NOT count toward\nthe 3 — only explicit ✓/✗ taps. Sightings with no officerUnitId\nalways re-queue on restart (no unit to track against).\n\nSchema: DB migration 25→26 adds userConfirmTapCount, userDismissTapCount,\nverdictLocked, lockedVerdict to officer_units.\n\nPopup filter: nextItem() skips sightings whose officer unit has\nverdictLocked=true. isLockedByUnit() checks MAC membership in locked\nunits for triangulation proximity items.",
+    "Author": "OpenClaw Agent \u003cagent@openclaw.ai\u003e",
+    "Committer": "OpenClaw Agent \u003cagent@openclaw.ai\u003e"
+  },
+  "Results": [
+    {
+      "Target": "app/build/tmp/.cache/expanded/zip_a33b649e552c51298e5a242c2f0d0e3c/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Packages": [
+        {
+          "ID": "org.jacoco:org.jacoco.agent:0.8.8::b1385d71",
+          "Name": "org.jacoco:org.jacoco.agent",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jacoco/org.jacoco.agent@0.8.8",
+            "UID": "783096bdfc375978"
+          },
+          "Version": "0.8.8",
+          "Licenses": [
+            "EPL-2.0"
+          ],
+          "Relationship": "root",
+          "AnalyzedBy": "pom"
+        }
+      ]
+    },
+    {
+      "Target": "backend/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "watchthewatcher/p2p",
+          "Name": "watchthewatcher/p2p",
+          "Identifier": {
+            "PURL": "pkg:golang/watchthewatcher/p2p",
+            "UID": "cb2106f9d594e217"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "github.com/libp2p/go-libp2p-noise@v0.3.0",
+            "github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+            "github.com/libp2p/go-libp2p@v0.32.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p@v0.32.0",
+          "Name": "github.com/libp2p/go-libp2p",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p@v0.32.0",
+            "UID": "950f95ed489a0508"
+          },
+          "Version": "v0.32.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p-noise@v0.3.0",
+          "Name": "github.com/libp2p/go-libp2p-noise",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p-noise@v0.3.0",
+            "UID": "26cc7f69456df38f"
+          },
+          "Version": "v0.3.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+          "Name": "github.com/libp2p/go-libp2p-pubsub",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+            "UID": "a260b944a1be5060"
+          },
+          "Version": "v0.9.3",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        }
+      ]
+    },
+    {
+      "Target": "backend/Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 26,
+        "Failures": 2
+      },
+      "Misconfigurations": [
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0001",
+          "Title": "':latest' tag used",
+          "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+          "Message": "Specify a tag in the 'FROM' statement for image 'alpine'",
+          "Namespace": "builtin.dockerfile.DS001",
+          "Query": "data.builtin.dockerfile.DS001.deny",
+          "Resolution": "Add a tag to the image in the 'FROM' statement",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0001",
+          "References": [
+            "https://avd.aquasec.com/misconfig/ds-0001"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general",
+            "StartLine": 1,
+            "EndLine": 1,
+            "Code": {
+              "Lines": [
+                {
+                  "Number": 1,
+                  "Content": "FROM alpine:latest AS builder",
+                  "IsCause": true,
+                  "Annotation": "",
+                  "Truncated": false,
+                  "Highlighted": "\u001b[38;5;64mFROM\u001b[0m\u001b[38;5;37m alpine:latest AS builder\u001b[0m",
+                  "FirstCause": true,
+                  "LastCause": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0001",
+          "Title": "':latest' tag used",
+          "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+          "Message": "Specify a tag in the 'FROM' statement for image 'alpine'",
+          "Namespace": "builtin.dockerfile.DS001",
+          "Query": "data.builtin.dockerfile.DS001.deny",
+          "Resolution": "Add a tag to the image in the 'FROM' statement",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0001",
+          "References": [
+            "https://avd.aquasec.com/misconfig/ds-0001"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general",
+            "StartLine": 15,
+            "EndLine": 15,
+            "Code": {
+              "Lines": [
+                {
+                  "Number": 15,
+                  "Content": "FROM alpine:latest",
+                  "IsCause": true,
+                  "Annotation": "",
+                  "Truncated": false,
+                  "Highlighted": "\u001b[38;5;64mFROM\u001b[0m\u001b[38;5;37m alpine:latest\u001b[0m",
+                  "FirstCause": true,
+                  "LastCause": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

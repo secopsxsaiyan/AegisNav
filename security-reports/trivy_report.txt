@@ -1,0 +1,47 @@
+
+Report Summary
+
+┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬─────────────────┬─────────┬───────────────────┐
+│                                      Target                                      │    Type    │ Vulnerabilities │ Secrets │ Misconfigurations │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┼───────────────────┤
+│ app/build/tmp/.cache/expanded/zip_a33b649e552c51298e5a242c2f0d0e3c/META-INF/mav- │    pom     │        0        │    -    │         -         │
+│ en/org.jacoco/org.jacoco.agent/pom.xml                                           │            │                 │         │                   │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┼───────────────────┤
+│ backend/go.mod                                                                   │   gomod    │        0        │    -    │         -         │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼─────────────────┼─────────┼───────────────────┤
+│ backend/Dockerfile                                                               │ dockerfile │        -        │    -    │         2         │
+└──────────────────────────────────────────────────────────────────────────────────┴────────────┴─────────────────┴─────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+backend/Dockerfile (dockerfile)
+===============================
+Tests: 28 (SUCCESSES: 26, FAILURES: 2)
+Failures: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 2, HIGH: 0, CRITICAL: 0)
+
+DS-0001 (MEDIUM): Specify a tag in the 'FROM' statement for image 'alpine'
+════════════════════════════════════════
+When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.
+
+See https://avd.aquasec.com/misconfig/ds-0001
+────────────────────────────────────────
+ backend/Dockerfile:1
+────────────────────────────────────────
+   1 [ FROM alpine:latest AS builder
+────────────────────────────────────────
+
+
+DS-0001 (MEDIUM): Specify a tag in the 'FROM' statement for image 'alpine'
+════════════════════════════════════════
+When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.
+
+See https://avd.aquasec.com/misconfig/ds-0001
+────────────────────────────────────────
+ backend/Dockerfile:15
+────────────────────────────────────────
+  15 [ FROM alpine:latest
+────────────────────────────────────────
+
+

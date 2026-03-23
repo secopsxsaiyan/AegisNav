@@ -1,0 +1,180 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.69.3"
+  },
+  "ReportID": "019cde03-f61a-7846-a64f-42fbc752964e",
+  "CreatedAt": "2026-03-11T13:48:47.514543792-04:00",
+  "ArtifactID": "sha256:88e29aef7c262f529255177dabfa1880daeb3345e21b4b7dbd2d5a2b4ab5c7ed",
+  "ArtifactName": ".",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://tea.pasubis.com/o4o793uys/dev-AegisNav.git",
+    "Branch": "main",
+    "Commit": "b285b3d9eb97e017c8135330add91289856852d6",
+    "CommitMsg": "fix: correct email to admin@aegisnav.com",
+    "Author": "OpenClaw Agent \u003cagent@openclaw.ai\u003e",
+    "Committer": "OpenClaw Agent \u003cagent@openclaw.ai\u003e"
+  },
+  "Results": [
+    {
+      "Target": "app/build/tmp/.cache/expanded/zip_a33b649e552c51298e5a242c2f0d0e3c/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Packages": [
+        {
+          "ID": "org.jacoco:org.jacoco.agent:0.8.8::b1385d71",
+          "Name": "org.jacoco:org.jacoco.agent",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jacoco/org.jacoco.agent@0.8.8",
+            "UID": "783096bdfc375978"
+          },
+          "Version": "0.8.8",
+          "Licenses": [
+            "EPL-2.0"
+          ],
+          "Relationship": "root",
+          "AnalyzedBy": "pom"
+        }
+      ]
+    },
+    {
+      "Target": "backend/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "watchthewatcher/p2p",
+          "Name": "watchthewatcher/p2p",
+          "Identifier": {
+            "PURL": "pkg:golang/watchthewatcher/p2p",
+            "UID": "cb2106f9d594e217"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "github.com/libp2p/go-libp2p-noise@v0.3.0",
+            "github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+            "github.com/libp2p/go-libp2p@v0.32.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p@v0.32.0",
+          "Name": "github.com/libp2p/go-libp2p",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p@v0.32.0",
+            "UID": "950f95ed489a0508"
+          },
+          "Version": "v0.32.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p-noise@v0.3.0",
+          "Name": "github.com/libp2p/go-libp2p-noise",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p-noise@v0.3.0",
+            "UID": "26cc7f69456df38f"
+          },
+          "Version": "v0.3.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+          "Name": "github.com/libp2p/go-libp2p-pubsub",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+            "UID": "a260b944a1be5060"
+          },
+          "Version": "v0.9.3",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        }
+      ]
+    },
+    {
+      "Target": "backend/Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 26,
+        "Failures": 2
+      },
+      "Misconfigurations": [
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0001",
+          "Title": "':latest' tag used",
+          "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+          "Message": "Specify a tag in the 'FROM' statement for image 'alpine'",
+          "Namespace": "builtin.dockerfile.DS001",
+          "Query": "data.builtin.dockerfile.DS001.deny",
+          "Resolution": "Add a tag to the image in the 'FROM' statement",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0001",
+          "References": [
+            "https://avd.aquasec.com/misconfig/ds-0001"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general",
+            "StartLine": 1,
+            "EndLine": 1,
+            "Code": {
+              "Lines": [
+                {
+                  "Number": 1,
+                  "Content": "FROM alpine:latest AS builder",
+                  "IsCause": true,
+                  "Annotation": "",
+                  "Truncated": false,
+                  "Highlighted": "\u001b[38;5;64mFROM\u001b[0m\u001b[38;5;37m alpine:latest AS builder\u001b[0m",
+                  "FirstCause": true,
+                  "LastCause": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0001",
+          "Title": "':latest' tag used",
+          "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+          "Message": "Specify a tag in the 'FROM' statement for image 'alpine'",
+          "Namespace": "builtin.dockerfile.DS001",
+          "Query": "data.builtin.dockerfile.DS001.deny",
+          "Resolution": "Add a tag to the image in the 'FROM' statement",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0001",
+          "References": [
+            "https://avd.aquasec.com/misconfig/ds-0001"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general",
+            "StartLine": 15,
+            "EndLine": 15,
+            "Code": {
+              "Lines": [
+                {
+                  "Number": 15,
+                  "Content": "FROM alpine:latest",
+                  "IsCause": true,
+                  "Annotation": "",
+                  "Truncated": false,
+                  "Highlighted": "\u001b[38;5;64mFROM\u001b[0m\u001b[38;5;37m alpine:latest\u001b[0m",
+                  "FirstCause": true,
+                  "LastCause": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

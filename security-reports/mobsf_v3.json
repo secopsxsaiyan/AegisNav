@@ -1,0 +1,3921 @@
+{
+  "errors": [],
+  "mobsfscan_version": "0.4.5",
+  "results": {
+    "android_certificate_transparency": {
+      "metadata": {
+        "cwe": "CWE-295: Improper Certificate Validation",
+        "description": "This app does not enforce TLS Certificate Transparency which helps to  detect SSL certificates that have been mistakenly issued by a  certificate authority or maliciously acquired from an otherwise  unimpeachable certificate authority.",
+        "masvs": "MSTG-NETWORK-4",
+        "owasp-mobile": "M3: Insecure Communication",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4",
+        "severity": "INFO"
+      }
+    },
+    "android_kotlin_hardcoded": {
+      "files": [
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            487,
+            488
+          ],
+          "match_position": [
+            24818,
+            24858
+          ],
+          "match_string": "key = \"beacon_history:${event.mac}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            329,
+            330
+          ],
+          "match_position": [
+            15658,
+            15766
+          ],
+          "match_string": "key = \"${name.lowercase()}|${\"%.2f\".format(cursor.getdouble(3))}|${\"%.2f\".format(cursor.getdouble(4))}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            702,
+            703
+          ],
+          "match_position": [
+            30360,
+            30413
+          ],
+          "match_string": "key = \"cell_${cell.latbucket}_${cell.lonbucket}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            655,
+            656
+          ],
+          "match_position": [
+            29520,
+            29554
+          ],
+          "match_string": "key = \"${cam.lat},${cam.lon}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanReceiver.kt",
+          "match_lines": [
+            98,
+            99
+          ],
+          "match_position": [
+            4408,
+            4468
+          ],
+          "match_string": "key = \"android.bluetooth.le.extra.list_of_scan_results\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/security/DatabaseKeyManager.kt",
+          "match_lines": [
+            23,
+            25
+          ],
+          "match_position": [
+            855,
+            880
+          ],
+          "match_string": "pass = \"db_pass_enc\"\n\n   "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/RssiDistanceEstimator.kt",
+          "match_lines": [
+            69,
+            70
+          ],
+          "match_position": [
+            2449,
+            2500
+          ],
+          "match_string": "key = \"${mac}_${if (isble) \"ble\" else \"wifi\"}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/RssiDistanceEstimator.kt",
+          "match_lines": [
+            95,
+            96
+          ],
+          "match_position": [
+            3813,
+            3864
+          ],
+          "match_string": "key = \"${mac}_${if (isble) \"ble\" else \"wifi\"}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/RssiDistanceEstimator.kt",
+          "match_lines": [
+            137,
+            138
+          ],
+          "match_position": [
+            5739,
+            5790
+          ],
+          "match_string": "key = \"${mac}_${if (isble) \"ble\" else \"wifi\"}\"\n    "
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerDetectionEngine.kt",
+          "match_lines": [
+            178,
+            179
+          ],
+          "match_position": [
+            6670,
+            6697
+          ],
+          "match_string": "key = \"companion_$mac\"\n    "
+        }
+      ],
+      "metadata": {
+        "cwe": "CWE-798: Use of Hard-coded Credentials",
+        "description": "Files may contain hardcoded sensitive information like usernames, passwords, keys etc.",
+        "masvs": "MSTG-STORAGE-14",
+        "owasp-mobile": "M9: Reverse Engineering",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#storing-a-key---example",
+        "severity": "WARNING"
+      }
+    },
+    "android_kotlin_logging": {
+      "files": [
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            235,
+            235
+          ],
+          "match_position": [
+            10118,
+            10123
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            239,
+            239
+          ],
+          "match_position": [
+            10285,
+            10290
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            246,
+            246
+          ],
+          "match_position": [
+            10628,
+            10633
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            137,
+            137
+          ],
+          "match_position": [
+            5874,
+            5879
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            146,
+            146
+          ],
+          "match_position": [
+            6350,
+            6355
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            248,
+            248
+          ],
+          "match_position": [
+            10735,
+            10740
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            82,
+            82
+          ],
+          "match_position": [
+            3253,
+            3258
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            140,
+            140
+          ],
+          "match_position": [
+            6048,
+            6053
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            142,
+            142
+          ],
+          "match_position": [
+            6200,
+            6205
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            197,
+            197
+          ],
+          "match_position": [
+            8660,
+            8665
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            206,
+            206
+          ],
+          "match_position": [
+            9023,
+            9028
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            215,
+            215
+          ],
+          "match_position": [
+            9365,
+            9370
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt",
+          "match_lines": [
+            224,
+            224
+          ],
+          "match_position": [
+            9704,
+            9709
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/LocationRepository.kt",
+          "match_lines": [
+            63,
+            63
+          ],
+          "match_position": [
+            2454,
+            2459
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            192,
+            192
+          ],
+          "match_position": [
+            8984,
+            8989
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            2633,
+            2633
+          ],
+          "match_position": [
+            124218,
+            124223
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            1744,
+            1744
+          ],
+          "match_position": [
+            87422,
+            87427
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            1829,
+            1829
+          ],
+          "match_position": [
+            91149,
+            91154
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            1845,
+            1845
+          ],
+          "match_position": [
+            91825,
+            91830
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            1861,
+            1861
+          ],
+          "match_position": [
+            92558,
+            92563
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            1884,
+            1884
+          ],
+          "match_position": [
+            93426,
+            93431
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/MainActivity.kt",
+          "match_lines": [
+            1913,
+            1913
+          ],
+          "match_position": [
+            94671,
+            94676
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            356,
+            356
+          ],
+          "match_position": [
+            18491,
+            18496
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            364,
+            364
+          ],
+          "match_position": [
+            19118,
+            19123
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            540,
+            540
+          ],
+          "match_position": [
+            27577,
+            27582
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            558,
+            558
+          ],
+          "match_position": [
+            28429,
+            28434
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            648,
+            648
+          ],
+          "match_position": [
+            32350,
+            32355
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            661,
+            661
+          ],
+          "match_position": [
+            32936,
+            32941
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            909,
+            909
+          ],
+          "match_position": [
+            45216,
+            45221
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            986,
+            986
+          ],
+          "match_position": [
+            48909,
+            48914
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            182,
+            182
+          ],
+          "match_position": [
+            8746,
+            8751
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            262,
+            262
+          ],
+          "match_position": [
+            13342,
+            13347
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            413,
+            413
+          ],
+          "match_position": [
+            21765,
+            21770
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            505,
+            505
+          ],
+          "match_position": [
+            25729,
+            25734
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            511,
+            511
+          ],
+          "match_position": [
+            26178,
+            26183
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            515,
+            515
+          ],
+          "match_position": [
+            26324,
+            26329
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            782,
+            782
+          ],
+          "match_position": [
+            39223,
+            39228
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            834,
+            834
+          ],
+          "match_position": [
+            41743,
+            41748
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            254,
+            254
+          ],
+          "match_position": [
+            12841,
+            12846
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            429,
+            429
+          ],
+          "match_position": [
+            22599,
+            22604
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            432,
+            432
+          ],
+          "match_position": [
+            22765,
+            22770
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            490,
+            490
+          ],
+          "match_position": [
+            25018,
+            25023
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            832,
+            832
+          ],
+          "match_position": [
+            41610,
+            41615
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            854,
+            854
+          ],
+          "match_position": [
+            42579,
+            42584
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            874,
+            874
+          ],
+          "match_position": [
+            43475,
+            43480
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            916,
+            916
+          ],
+          "match_position": [
+            45524,
+            45529
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            993,
+            993
+          ],
+          "match_position": [
+            49287,
+            49292
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            454,
+            454
+          ],
+          "match_position": [
+            23692,
+            23697
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            650,
+            650
+          ],
+          "match_position": [
+            32456,
+            32461
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ScanService.kt",
+          "match_lines": [
+            856,
+            856
+          ],
+          "match_position": [
+            42696,
+            42701
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ThemeEngine.kt",
+          "match_lines": [
+            78,
+            78
+          ],
+          "match_position": [
+            2762,
+            2767
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ThemeEngine.kt",
+          "match_lines": [
+            86,
+            86
+          ],
+          "match_position": [
+            3011,
+            3016
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ThemeEngine.kt",
+          "match_lines": [
+            105,
+            105
+          ],
+          "match_position": [
+            3488,
+            3493
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TilePreCacheWorker.kt",
+          "match_lines": [
+            144,
+            144
+          ],
+          "match_position": [
+            6308,
+            6313
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TilePreCacheWorker.kt",
+          "match_lines": [
+            154,
+            154
+          ],
+          "match_position": [
+            6720,
+            6725
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TilePreCacheWorker.kt",
+          "match_lines": [
+            179,
+            179
+          ],
+          "match_position": [
+            7833,
+            7838
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TilePreCacheWorker.kt",
+          "match_lines": [
+            116,
+            116
+          ],
+          "match_position": [
+            5098,
+            5103
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TilePreCacheWorker.kt",
+          "match_lines": [
+            142,
+            142
+          ],
+          "match_position": [
+            6197,
+            6202
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TilePreCacheWorker.kt",
+          "match_lines": [
+            128,
+            128
+          ],
+          "match_position": [
+            5626,
+            5631
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TileSourceResolver.kt",
+          "match_lines": [
+            62,
+            62
+          ],
+          "match_position": [
+            2417,
+            2422
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TileSourceResolver.kt",
+          "match_lines": [
+            50,
+            50
+          ],
+          "match_position": [
+            1940,
+            1945
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TileSourceResolver.kt",
+          "match_lines": [
+            69,
+            69
+          ],
+          "match_position": [
+            2754,
+            2759
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TileSourceResolver.kt",
+          "match_lines": [
+            37,
+            37
+          ],
+          "match_position": [
+            1497,
+            1502
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TileSourceResolver.kt",
+          "match_lines": [
+            51,
+            51
+          ],
+          "match_position": [
+            2004,
+            2009
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/TileSourceResolver.kt",
+          "match_lines": [
+            65,
+            65
+          ],
+          "match_position": [
+            2587,
+            2592
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/alpr/AlprProximityDetector.kt",
+          "match_lines": [
+            121,
+            121
+          ],
+          "match_position": [
+            5407,
+            5412
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/alpr/AlprProximityDetector.kt",
+          "match_lines": [
+            132,
+            132
+          ],
+          "match_position": [
+            5966,
+            5971
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/alpr/AlprProximityDetector.kt",
+          "match_lines": [
+            184,
+            184
+          ],
+          "match_position": [
+            8003,
+            8008
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/baseline/BaselineEngine.kt",
+          "match_lines": [
+            144,
+            144
+          ],
+          "match_position": [
+            6148,
+            6153
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/baseline/BaselineEngine.kt",
+          "match_lines": [
+            119,
+            119
+          ],
+          "match_position": [
+            4871,
+            4876
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/baseline/BaselineEngine.kt",
+          "match_lines": [
+            137,
+            137
+          ],
+          "match_position": [
+            5858,
+            5863
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/CorrelationEngine.kt",
+          "match_lines": [
+            105,
+            105
+          ],
+          "match_position": [
+            5256,
+            5261
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/CorrelationEngine.kt",
+          "match_lines": [
+            77,
+            77
+          ],
+          "match_position": [
+            3320,
+            3325
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/CorrelationEngine.kt",
+          "match_lines": [
+            96,
+            96
+          ],
+          "match_position": [
+            4560,
+            4565
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/CrossCorrelationEngine.kt",
+          "match_lines": [
+            163,
+            163
+          ],
+          "match_position": [
+            6753,
+            6758
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/CrossCorrelationEngine.kt",
+          "match_lines": [
+            219,
+            219
+          ],
+          "match_position": [
+            9037,
+            9042
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/CrossCorrelationEngine.kt",
+          "match_lines": [
+            190,
+            190
+          ],
+          "match_position": [
+            7749,
+            7754
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            172,
+            172
+          ],
+          "match_position": [
+            6749,
+            6754
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            301,
+            301
+          ],
+          "match_position": [
+            12105,
+            12110
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            417,
+            417
+          ],
+          "match_position": [
+            16228,
+            16233
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            530,
+            530
+          ],
+          "match_position": [
+            20647,
+            20652
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            211,
+            211
+          ],
+          "match_position": [
+            8482,
+            8487
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            222,
+            222
+          ],
+          "match_position": [
+            9030,
+            9035
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            233,
+            233
+          ],
+          "match_position": [
+            9560,
+            9565
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            256,
+            256
+          ],
+          "match_position": [
+            10697,
+            10702
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/correlation/MacCorrelationEngine.kt",
+          "match_lines": [
+            489,
+            489
+          ],
+          "match_position": [
+            18726,
+            18731
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/data/DataDownloadManager.kt",
+          "match_lines": [
+            138,
+            138
+          ],
+          "match_position": [
+            6239,
+            6244
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/data/DataDownloadManager.kt",
+          "match_lines": [
+            146,
+            146
+          ],
+          "match_position": [
+            6571,
+            6576
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/data/DataDownloadManager.kt",
+          "match_lines": [
+            210,
+            210
+          ],
+          "match_position": [
+            9754,
+            9759
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/data/DataDownloadManager.kt",
+          "match_lines": [
+            123,
+            123
+          ],
+          "match_position": [
+            5624,
+            5629
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/data/db/DatabaseModule.kt",
+          "match_lines": [
+            59,
+            59
+          ],
+          "match_position": [
+            2552,
+            2557
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/data/db/DatabaseModule.kt",
+          "match_lines": [
+            82,
+            82
+          ],
+          "match_position": [
+            3903,
+            3908
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockDetector.kt",
+          "match_lines": [
+            93,
+            93
+          ],
+          "match_position": [
+            4336,
+            4341
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockDetector.kt",
+          "match_lines": [
+            253,
+            253
+          ],
+          "match_position": [
+            11694,
+            11699
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockDetector.kt",
+          "match_lines": [
+            102,
+            102
+          ],
+          "match_position": [
+            4851,
+            4856
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockReportingCoordinator.kt",
+          "match_lines": [
+            94,
+            94
+          ],
+          "match_position": [
+            3412,
+            3417
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockReportingCoordinator.kt",
+          "match_lines": [
+            138,
+            138
+          ],
+          "match_position": [
+            5483,
+            5488
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockReportingCoordinator.kt",
+          "match_lines": [
+            77,
+            77
+          ],
+          "match_position": [
+            2626,
+            2631
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/flock/FlockReportingCoordinator.kt",
+          "match_lines": [
+            92,
+            92
+          ],
+          "match_position": [
+            3294,
+            3299
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            474,
+            474
+          ],
+          "match_position": [
+            21892,
+            21897
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            149,
+            149
+          ],
+          "match_position": [
+            7471,
+            7476
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            485,
+            485
+          ],
+          "match_position": [
+            22371,
+            22376
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            60,
+            60
+          ],
+          "match_position": [
+            2242,
+            2247
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            94,
+            94
+          ],
+          "match_position": [
+            4277,
+            4282
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            99,
+            99
+          ],
+          "match_position": [
+            4577,
+            4582
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            118,
+            118
+          ],
+          "match_position": [
+            5773,
+            5778
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            127,
+            127
+          ],
+          "match_position": [
+            6310,
+            6315
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            134,
+            134
+          ],
+          "match_position": [
+            6749,
+            6754
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            146,
+            146
+          ],
+          "match_position": [
+            7332,
+            7337
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            264,
+            264
+          ],
+          "match_position": [
+            12770,
+            12775
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            483,
+            483
+          ],
+          "match_position": [
+            22265,
+            22270
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            464,
+            464
+          ],
+          "match_position": [
+            21533,
+            21538
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/ConvoyDetector.kt",
+          "match_lines": [
+            129,
+            129
+          ],
+          "match_position": [
+            5389,
+            5394
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/ConvoyDetector.kt",
+          "match_lines": [
+            167,
+            167
+          ],
+          "match_position": [
+            6999,
+            7004
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/CoordinatedSurveillanceDetector.kt",
+          "match_lines": [
+            138,
+            138
+          ],
+          "match_position": [
+            5515,
+            5520
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/EnhancedPersistenceScorer.kt",
+          "match_lines": [
+            119,
+            119
+          ],
+          "match_position": [
+            5032,
+            5037
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/FollowingDetector.kt",
+          "match_lines": [
+            78,
+            78
+          ],
+          "match_position": [
+            3135,
+            3140
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/FollowingDetector.kt",
+          "match_lines": [
+            84,
+            84
+          ],
+          "match_position": [
+            3391,
+            3396
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/FollowingDetector.kt",
+          "match_lines": [
+            140,
+            140
+          ],
+          "match_position": [
+            5619,
+            5624
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/MultiWindowAnalyzer.kt",
+          "match_lines": [
+            133,
+            133
+          ],
+          "match_position": [
+            5211,
+            5216
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/SsidPatternAnalyzer.kt",
+          "match_lines": [
+            143,
+            143
+          ],
+          "match_position": [
+            5456,
+            5461
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/SsidPatternAnalyzer.kt",
+          "match_lines": [
+            118,
+            118
+          ],
+          "match_position": [
+            4221,
+            4226
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/intelligence/SsidPatternAnalyzer.kt",
+          "match_lines": [
+            129,
+            129
+          ],
+          "match_position": [
+            4859,
+            4864
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/map/PmTilesHttpInterceptor.kt",
+          "match_lines": [
+            86,
+            86
+          ],
+          "match_position": [
+            3696,
+            3701
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/map/PmTilesHttpInterceptor.kt",
+          "match_lines": [
+            92,
+            92
+          ],
+          "match_position": [
+            3948,
+            3953
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/map/PmTilesHttpInterceptor.kt",
+          "match_lines": [
+            161,
+            161
+          ],
+          "match_position": [
+            6536,
+            6541
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/map/PmTilesHttpInterceptor.kt",
+          "match_lines": [
+            170,
+            170
+          ],
+          "match_position": [
+            6878,
+            6883
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/map/PmTilesHttpInterceptor.kt",
+          "match_lines": [
+            189,
+            189
+          ],
+          "match_position": [
+            7715,
+            7720
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/map/PmTilesHttpInterceptor.kt",
+          "match_lines": [
+            201,
+            201
+          ],
+          "match_position": [
+            8209,
+            8214
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            304,
+            304
+          ],
+          "match_position": [
+            13427,
+            13432
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            115,
+            115
+          ],
+          "match_position": [
+            4694,
+            4699
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            120,
+            120
+          ],
+          "match_position": [
+            4866,
+            4871
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            133,
+            133
+          ],
+          "match_position": [
+            5434,
+            5439
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            200,
+            200
+          ],
+          "match_position": [
+            8673,
+            8678
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            233,
+            233
+          ],
+          "match_position": [
+            10082,
+            10087
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            259,
+            259
+          ],
+          "match_position": [
+            11231,
+            11236
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            275,
+            275
+          ],
+          "match_position": [
+            11907,
+            11912
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            326,
+            326
+          ],
+          "match_position": [
+            14442,
+            14447
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            141,
+            141
+          ],
+          "match_position": [
+            5923,
+            5928
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            198,
+            198
+          ],
+          "match_position": [
+            8555,
+            8560
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            231,
+            231
+          ],
+          "match_position": [
+            9956,
+            9961
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/p2p/P2PManager.kt",
+          "match_lines": [
+            257,
+            257
+          ],
+          "match_position": [
+            11104,
+            11109
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            64,
+            64
+          ],
+          "match_position": [
+            2502,
+            2507
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            186,
+            186
+          ],
+          "match_position": [
+            7530,
+            7535
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            62,
+            62
+          ],
+          "match_position": [
+            2373,
+            2378
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            99,
+            99
+          ],
+          "match_position": [
+            4038,
+            4043
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            103,
+            103
+          ],
+          "match_position": [
+            4287,
+            4292
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            120,
+            120
+          ],
+          "match_position": [
+            5152,
+            5157
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/OfficerCorrelationEngine.kt",
+          "match_lines": [
+            183,
+            183
+          ],
+          "match_position": [
+            7378,
+            7383
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            320,
+            320
+          ],
+          "match_position": [
+            14277,
+            14282
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            329,
+            329
+          ],
+          "match_position": [
+            14660,
+            14665
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            142,
+            142
+          ],
+          "match_position": [
+            6577,
+            6582
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            374,
+            374
+          ],
+          "match_position": [
+            16775,
+            16780
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            394,
+            394
+          ],
+          "match_position": [
+            17941,
+            17946
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            433,
+            433
+          ],
+          "match_position": [
+            19586,
+            19591
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            76,
+            76
+          ],
+          "match_position": [
+            3038,
+            3043
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceDetector.kt",
+          "match_lines": [
+            147,
+            147
+          ],
+          "match_position": [
+            6861,
+            6866
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceReportingCoordinator.kt",
+          "match_lines": [
+            93,
+            93
+          ],
+          "match_position": [
+            3716,
+            3721
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceReportingCoordinator.kt",
+          "match_lines": [
+            148,
+            148
+          ],
+          "match_position": [
+            6516,
+            6521
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceReportingCoordinator.kt",
+          "match_lines": [
+            62,
+            62
+          ],
+          "match_position": [
+            2222,
+            2227
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceReportingCoordinator.kt",
+          "match_lines": [
+            74,
+            74
+          ],
+          "match_position": [
+            2861,
+            2866
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/police/PoliceReportingCoordinator.kt",
+          "match_lines": [
+            89,
+            89
+          ],
+          "match_position": [
+            3517,
+            3522
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            541,
+            541
+          ],
+          "match_position": [
+            23053,
+            23058
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            553,
+            553
+          ],
+          "match_position": [
+            23618,
+            23623
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            195,
+            195
+          ],
+          "match_position": [
+            8282,
+            8287
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            204,
+            204
+          ],
+          "match_position": [
+            8719,
+            8724
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            294,
+            294
+          ],
+          "match_position": [
+            12729,
+            12734
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            397,
+            397
+          ],
+          "match_position": [
+            16997,
+            17002
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            544,
+            544
+          ],
+          "match_position": [
+            23233,
+            23238
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            599,
+            599
+          ],
+          "match_position": [
+            25576,
+            25581
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            626,
+            626
+          ],
+          "match_position": [
+            27018,
+            27023
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            720,
+            720
+          ],
+          "match_position": [
+            31448,
+            31453
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            730,
+            730
+          ],
+          "match_position": [
+            32112,
+            32117
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            740,
+            740
+          ],
+          "match_position": [
+            32538,
+            32543
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            296,
+            296
+          ],
+          "match_position": [
+            12812,
+            12817
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            416,
+            416
+          ],
+          "match_position": [
+            17839,
+            17844
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            630,
+            630
+          ],
+          "match_position": [
+            27290,
+            27295
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt",
+          "match_lines": [
+            665,
+            665
+          ],
+          "match_position": [
+            28727,
+            28732
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            687,
+            687
+          ],
+          "match_position": [
+            31003,
+            31008
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            182,
+            182
+          ],
+          "match_position": [
+            8093,
+            8098
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            194,
+            194
+          ],
+          "match_position": [
+            8779,
+            8784
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            199,
+            199
+          ],
+          "match_position": [
+            9099,
+            9104
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            205,
+            205
+          ],
+          "match_position": [
+            9459,
+            9464
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            211,
+            211
+          ],
+          "match_position": [
+            9833,
+            9838
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            215,
+            215
+          ],
+          "match_position": [
+            10095,
+            10100
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            304,
+            304
+          ],
+          "match_position": [
+            13596,
+            13601
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            307,
+            307
+          ],
+          "match_position": [
+            13725,
+            13730
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            312,
+            312
+          ],
+          "match_position": [
+            13985,
+            13990
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            317,
+            317
+          ],
+          "match_position": [
+            14239,
+            14244
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            382,
+            382
+          ],
+          "match_position": [
+            17104,
+            17109
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            593,
+            593
+          ],
+          "match_position": [
+            26901,
+            26906
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            109,
+            109
+          ],
+          "match_position": [
+            4454,
+            4459
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            118,
+            118
+          ],
+          "match_position": [
+            4908,
+            4913
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            153,
+            153
+          ],
+          "match_position": [
+            6260,
+            6265
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            161,
+            161
+          ],
+          "match_position": [
+            6828,
+            6833
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            190,
+            190
+          ],
+          "match_position": [
+            8554,
+            8559
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            589,
+            589
+          ],
+          "match_position": [
+            26643,
+            26648
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            645,
+            645
+          ],
+          "match_position": [
+            28987,
+            28992
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            660,
+            660
+          ],
+          "match_position": [
+            29742,
+            29747
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            664,
+            664
+          ],
+          "match_position": [
+            29887,
+            29892
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            691,
+            691
+          ],
+          "match_position": [
+            31258,
+            31263
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            709,
+            709
+          ],
+          "match_position": [
+            32272,
+            32277
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            125,
+            125
+          ],
+          "match_position": [
+            5107,
+            5112
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            147,
+            147
+          ],
+          "match_position": [
+            5996,
+            6001
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            163,
+            163
+          ],
+          "match_position": [
+            6944,
+            6949
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            276,
+            276
+          ],
+          "match_position": [
+            12331,
+            12336
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            291,
+            291
+          ],
+          "match_position": [
+            12996,
+            13001
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            297,
+            297
+          ],
+          "match_position": [
+            13347,
+            13352
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            361,
+            361
+          ],
+          "match_position": [
+            16247,
+            16252
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            367,
+            367
+          ],
+          "match_position": [
+            16524,
+            16529
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            525,
+            525
+          ],
+          "match_position": [
+            23728,
+            23733
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            527,
+            527
+          ],
+          "match_position": [
+            23854,
+            23859
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            546,
+            546
+          ],
+          "match_position": [
+            24751,
+            24756
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            561,
+            561
+          ],
+          "match_position": [
+            25253,
+            25258
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            565,
+            565
+          ],
+          "match_position": [
+            25429,
+            25434
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            620,
+            620
+          ],
+          "match_position": [
+            28018,
+            28023
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            634,
+            634
+          ],
+          "match_position": [
+            28581,
+            28586
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            640,
+            640
+          ],
+          "match_position": [
+            28755,
+            28760
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            695,
+            695
+          ],
+          "match_position": [
+            31628,
+            31633
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/routing/RoutingRepository.kt",
+          "match_lines": [
+            699,
+            699
+          ],
+          "match_position": [
+            31863,
+            31868
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanReceiver.kt",
+          "match_lines": [
+            107,
+            107
+          ],
+          "match_position": [
+            4823,
+            4828
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanReceiver.kt",
+          "match_lines": [
+            112,
+            112
+          ],
+          "match_position": [
+            5016,
+            5021
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanReceiver.kt",
+          "match_lines": [
+            85,
+            85
+          ],
+          "match_position": [
+            3761,
+            3766
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanReceiver.kt",
+          "match_lines": [
+            94,
+            94
+          ],
+          "match_position": [
+            4305,
+            4310
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            168,
+            168
+          ],
+          "match_position": [
+            6350,
+            6355
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            99,
+            99
+          ],
+          "match_position": [
+            3615,
+            3620
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            122,
+            122
+          ],
+          "match_position": [
+            4546,
+            4551
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            177,
+            177
+          ],
+          "match_position": [
+            6711,
+            6716
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            181,
+            181
+          ],
+          "match_position": [
+            6871,
+            6876
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            106,
+            106
+          ],
+          "match_position": [
+            3908,
+            3913
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            113,
+            113
+          ],
+          "match_position": [
+            4238,
+            4243
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            118,
+            118
+          ],
+          "match_position": [
+            4423,
+            4428
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            150,
+            150
+          ],
+          "match_position": [
+            5731,
+            5736
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BackgroundScanWorker.kt",
+          "match_lines": [
+            165,
+            165
+          ],
+          "match_position": [
+            6235,
+            6240
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BluetoothStateMonitor.kt",
+          "match_lines": [
+            174,
+            174
+          ],
+          "match_position": [
+            7834,
+            7839
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BluetoothStateMonitor.kt",
+          "match_lines": [
+            83,
+            83
+          ],
+          "match_position": [
+            3493,
+            3498
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BluetoothStateMonitor.kt",
+          "match_lines": [
+            166,
+            166
+          ],
+          "match_position": [
+            7342,
+            7347
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BluetoothStateMonitor.kt",
+          "match_lines": [
+            171,
+            171
+          ],
+          "match_position": [
+            7639,
+            7644
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/BluetoothStateMonitor.kt",
+          "match_lines": [
+            98,
+            98
+          ],
+          "match_position": [
+            4115,
+            4120
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/OpportunisticScanner.kt",
+          "match_lines": [
+            72,
+            72
+          ],
+          "match_position": [
+            2702,
+            2707
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/OpportunisticScanner.kt",
+          "match_lines": [
+            99,
+            99
+          ],
+          "match_position": [
+            3686,
+            3691
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/OpportunisticScanner.kt",
+          "match_lines": [
+            70,
+            70
+          ],
+          "match_position": [
+            2573,
+            2578
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/OpportunisticScanner.kt",
+          "match_lines": [
+            97,
+            97
+          ],
+          "match_position": [
+            3593,
+            3598
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/OpportunisticScanner.kt",
+          "match_lines": [
+            55,
+            55
+          ],
+          "match_position": [
+            2070,
+            2075
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/OpportunisticScanner.kt",
+          "match_lines": [
+            60,
+            60
+          ],
+          "match_position": [
+            2241,
+            2246
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/ScanOrchestrator.kt",
+          "match_lines": [
+            97,
+            97
+          ],
+          "match_position": [
+            3500,
+            3505
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/ScanOrchestrator.kt",
+          "match_lines": [
+            177,
+            177
+          ],
+          "match_position": [
+            6380,
+            6385
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/scan/ScanOrchestrator.kt",
+          "match_lines": [
+            172,
+            172
+          ],
+          "match_position": [
+            6140,
+            6145
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/RssiDistanceEstimator.kt",
+          "match_lines": [
+            109,
+            109
+          ],
+          "match_position": [
+            4488,
+            4493
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/RssiDistanceEstimator.kt",
+          "match_lines": [
+            112,
+            112
+          ],
+          "match_position": [
+            4723,
+            4728
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/SignalTriangulator.kt",
+          "match_lines": [
+            131,
+            131
+          ],
+          "match_position": [
+            5395,
+            5400
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/SignalTriangulator.kt",
+          "match_lines": [
+            141,
+            141
+          ],
+          "match_position": [
+            5734,
+            5739
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/SignalTriangulator.kt",
+          "match_lines": [
+            186,
+            186
+          ],
+          "match_position": [
+            7312,
+            7317
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/signal/SignalTriangulator.kt",
+          "match_lines": [
+            219,
+            219
+          ],
+          "match_position": [
+            8651,
+            8656
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            168,
+            168
+          ],
+          "match_position": [
+            5997,
+            6002
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            230,
+            230
+          ],
+          "match_position": [
+            8394,
+            8399
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            294,
+            294
+          ],
+          "match_position": [
+            10793,
+            10798
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            116,
+            116
+          ],
+          "match_position": [
+            4191,
+            4196
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            126,
+            126
+          ],
+          "match_position": [
+            4496,
+            4501
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            172,
+            172
+          ],
+          "match_position": [
+            6183,
+            6188
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            193,
+            193
+          ],
+          "match_position": [
+            7149,
+            7154
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            191,
+            191
+          ],
+          "match_position": [
+            7030,
+            7035
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            260,
+            260
+          ],
+          "match_position": [
+            9525,
+            9530
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/BeaconHistoryManager.kt",
+          "match_lines": [
+            105,
+            105
+          ],
+          "match_position": [
+            3845,
+            3850
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/OuiLookup.kt",
+          "match_lines": [
+            80,
+            80
+          ],
+          "match_position": [
+            3044,
+            3049
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerDetectionEngine.kt",
+          "match_lines": [
+            231,
+            231
+          ],
+          "match_position": [
+            9056,
+            9061
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerDetectionEngine.kt",
+          "match_lines": [
+            239,
+            239
+          ],
+          "match_position": [
+            9373,
+            9378
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerDetectionEngine.kt",
+          "match_lines": [
+            97,
+            97
+          ],
+          "match_position": [
+            4088,
+            4093
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerDetectionEngine.kt",
+          "match_lines": [
+            257,
+            257
+          ],
+          "match_position": [
+            10088,
+            10093
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerDetectionEngine.kt",
+          "match_lines": [
+            339,
+            339
+          ],
+          "match_position": [
+            13240,
+            13245
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/tracker/TrackerTypeClassifier.kt",
+          "match_lines": [
+            212,
+            212
+          ],
+          "match_position": [
+            9406,
+            9411
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/ui/DataDownloadScreen.kt",
+          "match_lines": [
+            199,
+            199
+          ],
+          "match_position": [
+            8848,
+            8853
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AlertTtsManager.kt",
+          "match_lines": [
+            67,
+            67
+          ],
+          "match_position": [
+            2255,
+            2260
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AlertTtsManager.kt",
+          "match_lines": [
+            77,
+            77
+          ],
+          "match_position": [
+            2745,
+            2750
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AlertTtsManager.kt",
+          "match_lines": [
+            42,
+            42
+          ],
+          "match_position": [
+            1383,
+            1388
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AlertTtsManager.kt",
+          "match_lines": [
+            44,
+            44
+          ],
+          "match_position": [
+            1466,
+            1471
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AlertTtsManager.kt",
+          "match_lines": [
+            55,
+            55
+          ],
+          "match_position": [
+            1780,
+            1785
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            8,
+            8
+          ],
+          "match_position": [
+            244,
+            249
+          ],
+          "match_string": "Log.d"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            13,
+            13
+          ],
+          "match_position": [
+            659,
+            664
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            14,
+            14
+          ],
+          "match_position": [
+            754,
+            759
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            9,
+            9
+          ],
+          "match_position": [
+            323,
+            328
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            10,
+            10
+          ],
+          "match_position": [
+            402,
+            407
+          ],
+          "match_string": "Log.v"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            11,
+            11
+          ],
+          "match_position": [
+            481,
+            486
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt",
+          "match_lines": [
+            12,
+            12
+          ],
+          "match_position": [
+            576,
+            581
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/util/NotificationHelper.kt",
+          "match_lines": [
+            21,
+            21
+          ],
+          "match_position": [
+            807,
+            812
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/AlprDataSyncWorker.kt",
+          "match_lines": [
+            73,
+            73
+          ],
+          "match_position": [
+            3076,
+            3081
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/AlprDataSyncWorker.kt",
+          "match_lines": [
+            76,
+            76
+          ],
+          "match_position": [
+            3224,
+            3229
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/AlprDataSyncWorker.kt",
+          "match_lines": [
+            50,
+            50
+          ],
+          "match_position": [
+            1832,
+            1837
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/AlprDataSyncWorker.kt",
+          "match_lines": [
+            57,
+            57
+          ],
+          "match_position": [
+            2317,
+            2322
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/AlprDataSyncWorker.kt",
+          "match_lines": [
+            62,
+            62
+          ],
+          "match_position": [
+            2528,
+            2533
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/AlprDataSyncWorker.kt",
+          "match_lines": [
+            67,
+            67
+          ],
+          "match_position": [
+            2759,
+            2764
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/RedLightDataSyncWorker.kt",
+          "match_lines": [
+            61,
+            61
+          ],
+          "match_position": [
+            2598,
+            2603
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/RedLightDataSyncWorker.kt",
+          "match_lines": [
+            64,
+            64
+          ],
+          "match_position": [
+            2727,
+            2732
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/RedLightDataSyncWorker.kt",
+          "match_lines": [
+            45,
+            45
+          ],
+          "match_position": [
+            1732,
+            1737
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/RedLightDataSyncWorker.kt",
+          "match_lines": [
+            51,
+            51
+          ],
+          "match_position": [
+            2133,
+            2138
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/RedLightDataSyncWorker.kt",
+          "match_lines": [
+            57,
+            57
+          ],
+          "match_position": [
+            2321,
+            2326
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/RedLightDataSyncWorker.kt",
+          "match_lines": [
+            84,
+            84
+          ],
+          "match_position": [
+            3468,
+            3473
+          ],
+          "match_string": "Log.w"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/SpeedDataSyncWorker.kt",
+          "match_lines": [
+            61,
+            61
+          ],
+          "match_position": [
+            2551,
+            2556
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/SpeedDataSyncWorker.kt",
+          "match_lines": [
+            64,
+            64
+          ],
+          "match_position": [
+            2680,
+            2685
+          ],
+          "match_string": "Log.e"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/SpeedDataSyncWorker.kt",
+          "match_lines": [
+            45,
+            45
+          ],
+          "match_position": [
+            1698,
+            1703
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/SpeedDataSyncWorker.kt",
+          "match_lines": [
+            51,
+            51
+          ],
+          "match_position": [
+            2090,
+            2095
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/SpeedDataSyncWorker.kt",
+          "match_lines": [
+            57,
+            57
+          ],
+          "match_position": [
+            2281,
+            2286
+          ],
+          "match_string": "Log.i"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/worker/SpeedDataSyncWorker.kt",
+          "match_lines": [
+            84,
+            84
+          ],
+          "match_position": [
+            3421,
+            3426
+          ],
+          "match_string": "Log.w"
+        }
+      ],
+      "metadata": {
+        "cwe": "CWE-532: Insertion of Sensitive Information into Log File",
+        "description": "The App logs information. Sensitive information should never be logged.",
+        "input_case": "exact",
+        "masvs": "MSTG-STORAGE-3",
+        "owasp-mobile": "M1: Improper Platform Usage",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05d-Testing-Data-Storage.md#logs",
+        "severity": "INFO"
+      }
+    },
+    "android_kotlin_sql_raw_query": {
+      "files": [
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            4,
+            4
+          ],
+          "match_position": [
+            73,
+            96
+          ],
+          "match_string": "android.database.sqlite"
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            189,
+            189
+          ],
+          "match_position": [
+            9174,
+            9183
+          ],
+          "match_string": "rawQuery("
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            234,
+            234
+          ],
+          "match_position": [
+            11411,
+            11420
+          ],
+          "match_string": "rawQuery("
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            273,
+            273
+          ],
+          "match_position": [
+            13214,
+            13223
+          ],
+          "match_string": "rawQuery("
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            309,
+            309
+          ],
+          "match_position": [
+            14765,
+            14774
+          ],
+          "match_string": "rawQuery("
+        },
+        {
+          "file_path": "app/src/main/kotlin/com/aegisnav/app/geocoder/OfflineGeocoderRepository.kt",
+          "match_lines": [
+            433,
+            433
+          ],
+          "match_position": [
+            20318,
+            20327
+          ],
+          "match_string": "rawQuery("
+        }
+      ],
+      "metadata": {
+        "cwe": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "description": "App uses SQLite Database and execute raw SQL query. Untrusted user input in raw SQL queries can cause SQL Injection. Also sensitive information should be encrypted and written to the database.",
+        "masvs": "MSTG-PLATFORM-2",
+        "owasp-mobile": "M7: Client Code Quality",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x04h-Testing-Code-Quality.md#injection-flaws-mstg-arch-2-and-mstg-platform-2",
+        "severity": "WARNING"
+      }
+    },
+    "android_root_detection": {
+      "metadata": {
+        "cwe": "CWE-919: Weaknesses in Mobile Applications",
+        "description": "This app does not have root detection capabilities. Running a sensitive application on a rooted device questions the device integrity and affects users data.",
+        "masvs": "MSTG-RESILIENCE-1",
+        "owasp-mobile": "M8: Code Tampering",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1",
+        "severity": "INFO"
+      }
+    },
+    "android_safetynet": {
+      "metadata": {
+        "cwe": "CWE-353: Missing Support for Integrity Check",
+        "description": "This app does not uses SafetyNet Attestation API that provides cryptographically-signed attestation, assessing the device's integrity. This check helps to ensure that the servers are interacting with the genuine app running on a genuine Android device. ",
+        "masvs": "MSTG-RESILIENCE-1",
+        "owasp-mobile": "M8: Code Tampering",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05j-Testing-Resiliency-Against-Reverse-Engineering.md#testing-root-detection-mstg-resilience-1",
+        "severity": "INFO"
+      }
+    },
+    "android_ssl_pinning": {
+      "metadata": {
+        "cwe": "CWE-295: Improper Certificate Validation",
+        "description": "This app does not use TLS/SSL certificate or public key pinning to detect or prevent MITM attacks in secure communication channel.",
+        "masvs": "MSTG-NETWORK-4",
+        "owasp-mobile": "M3: Insecure Communication",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05g-Testing-Network-Communication.md#testing-custom-certificate-stores-and-certificate-pinning-mstg-network-4",
+        "severity": "INFO"
+      }
+    },
+    "android_tapjacking": {
+      "metadata": {
+        "cwe": "CWE-200: Information Exposure",
+        "description": "This app does not have capabilities to prevent tapjacking attacks.",
+        "masvs": "MSTG-PLATFORM-9",
+        "owasp-mobile": "M1: Improper Platform Usage",
+        "reference": "https://github.com/MobSF/owasp-mstg/blob/master/Document/0x05h-Testing-Platform-Interaction.md#testing-for-overlay-attacks-mstg-platform-9",
+        "severity": "INFO"
+      }
+    }
+  }
+}

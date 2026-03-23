@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.2">
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        severity="Warning"
+        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.compose.runtime.lint.RuntimeIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()&#xA;(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`AutoboxingStateValueProperty`&#xA;`AutoboxingStateCreation`&#xA;`CoroutineCreationDuringComposition`&#xA;`FlowOperatorInvokedInComposition`&#xA;`ComposableLambdaParameterNaming`&#xA;`ComposableLambdaParameterPosition`&#xA;`ComposableNaming`&#xA;`StateFlowValueCalledInComposition`&#xA;`CompositionLocalNaming`&#xA;`MutableCollectionMutableState`&#xA;`ProduceStateDoesNotAssignValue`&#xA;`RememberReturnType`&#xA;`OpaqueUnitKey`&#xA;`UnrememberedMutableState`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library."
+        category="Lint"
+        priority="10"
+        summary="Obsolete custom lint check"
+        explanation="Lint can be extended with &quot;custom checks&quot;: additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.&#xA;&#xA;The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.&#xA;&#xA;This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.&#xA;&#xA;It may also flag issues found to be using a **newer** version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.">
+        <location
+            file="/home/autopilot4131/.gradle/caches/transforms-3/305d1de092086f6c75ee931065c6583d/transformed/jetified-runtime-release/jars/lint.jar"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        severity="Warning"
+        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.lifecycle.lint.LiveDataCoreIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()&#xA;(Referenced from androidx/lifecycle/lint/NonNullableMutableLiveDataDetector$createUastHandler$1.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`NullSafeMutableLiveData`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library."
+        category="Lint"
+        priority="10"
+        summary="Obsolete custom lint check"
+        explanation="Lint can be extended with &quot;custom checks&quot;: additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.&#xA;&#xA;The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.&#xA;&#xA;This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.&#xA;&#xA;It may also flag issues found to be using a **newer** version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.">
+        <location
+            file="/home/autopilot4131/.gradle/caches/transforms-3/9107ad0fc6188e621ba607f3487ba18f/transformed/lifecycle-livedata-core-2.8.3/jars/lint.jar"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with `targetSdkVersion` 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="                    name = result.device.name,"
+        errorLine2="                           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/PassiveBleScanner.kt"
+            line="42"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with `targetSdkVersion` 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="                val results = wm.scanResults.map { it.SSID to it.BSSID }"
+        errorLine2="                              ~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/PassiveWifiScanner.kt"
+            line="32"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with `targetSdkVersion` 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="            leScanner?.startScan(scanCallback) ?: run {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/ScanService.kt"
+            line="262"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with `targetSdkVersion` 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="        try { leScanner?.stopScan(scanCallback) } catch (_: Exception) {}"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/ScanService.kt"
+            line="297"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="                getSharedPreferences(&quot;alpr_prefs&quot;, Context.MODE_PRIVATE).edit().clear().commit()"
+        errorLine2="                                                                                        ~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/MainActivity.kt"
+            line="156"
+            column="89"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        severity="Warning"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background"
+        category="Correctness"
+        priority="6"
+        summary="Use `apply()` on `SharedPreferences`"
+        explanation="Consider using `apply()` instead of `commit` on shared preferences. Whereas `commit` blocks and writes its data to persistent storage immediately, `apply` will handle it in the background."
+        errorLine1="                getSharedPreferences(&quot;tile_prefs&quot;, Context.MODE_PRIVATE).edit().clear().commit()"
+        errorLine2="                                                                                        ~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/MainActivity.kt"
+            line="157"
+            column="89"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html as well as follow this guide:&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        url="https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        urls="https://developer.android.com/distribute/best-practices/develop/target-sdk.html,https://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdk = 35"
+        errorLine2="        ~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="BatteryLife"
+        severity="Warning"
+        message="Use of `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` violates the Play Store Content Policy regarding acceptable use cases, as described in https://developer.android.com/training/monitoring-device-state/doze-standby.html"
+        category="Correctness"
+        priority="5"
+        summary="Battery Life Issues"
+        explanation="This issue flags code that either&#xA;* negatively affects battery life, or&#xA;* uses APIs that have recently changed behavior to prevent background tasks from consuming memory and battery excessively.&#xA;&#xA;Generally, you should be using `WorkManager` instead.&#xA;&#xA;For more details on how to update your code, please see https://developer.android.com/topic/performance/background-optimization"
+        url="https://developer.android.com/topic/performance/background-optimization"
+        urls="https://developer.android.com/topic/performance/background-optimization"
+        errorLine1="                                                Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,"
+        errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/PrivacyWizardScreen.kt"
+            line="112"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.appcompat:appcompat:1.6.1&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="62"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-ktx than 1.13.1 is available: 1.18.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.core:core-ktx:1.13.1&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="63"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.8.3 is available: 2.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-runtime-ktx:2.8.3&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="64"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.8.3 is available: 2.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="65"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.activity:activity-compose than 1.8.2 is available: 1.13.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.activity:activity-compose:1.8.2&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="66"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.ui:ui than 1.5.4 is available: 1.10.5"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.compose.ui:ui:1.5.4&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="67"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.material3:material3 than 1.1.2 is available: 1.4.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.compose.material3:material3:1.1.2&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="68"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.material:material-icons-extended than 1.5.4 is available: 1.7.8"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.compose.material:material-icons-extended:1.5.4&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="69"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.ui:ui-tooling-preview than 1.5.4 is available: 1.10.5"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.compose.ui:ui-tooling-preview:1.5.4&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="70"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.ui:ui-tooling than 1.5.4 is available: 1.10.5"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    debugImplementation(&quot;androidx.compose.ui:ui-tooling:1.5.4&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="71"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.sqlite:sqlite-framework than 2.4.0 is available: 2.6.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.sqlite:sqlite-framework:2.4.0&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="101"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.8.3 is available: 2.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-runtime-compose:2.8.3&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="107"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.runtime:runtime-livedata than 1.6.3 is available: 1.10.5"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.compose.runtime:runtime-livedata:1.6.3&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="108"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.code.gson:gson than 2.10.1 is available: 2.11.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;com.google.code.gson:gson:2.10.1&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="109"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.9.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.work:work-runtime-ktx:2.9.0&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="114"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.ui:ui-test-junit4 than 1.5.4 is available: 1.10.5"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    androidTestImplementation(&quot;androidx.compose.ui:ui-test-junit4:1.5.4&quot;)"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="135"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.ui:ui-test-manifest than 1.5.4 is available: 1.10.5"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    debugImplementation(&quot;androidx.compose.ui:ui-test-manifest:1.5.4&quot;)"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/build.gradle.kts"
+            line="136"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        severity="Warning"
+        message="Modifier parameter should be the first optional parameter"
+        category="Correctness"
+        priority="3"
+        summary="Guidelines for Modifier parameters in a Composable function"
+        explanation="The first (or only) Modifier parameter in a Composable function should follow the following rules:&#xA;- Be named `modifier`&#xA;- Have a type of `Modifier`&#xA;- Either have no default value, or have a default value of `Modifier`&#xA;- If optional, be the first optional parameter in the parameter list"
+        errorLine1="    modifier: Modifier = Modifier"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/routing/NavigationUi.kt"
+            line="677"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun d(tag: String, msg: String) { if (BuildConfig.DEBUG) Log.d(tag, msg) }"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="8"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun i(tag: String, msg: String) { if (BuildConfig.DEBUG) Log.i(tag, msg) }"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="9"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun v(tag: String, msg: String) { if (BuildConfig.DEBUG) Log.v(tag, msg) }"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="10"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun w(tag: String, msg: String) { if (BuildConfig.DEBUG) Log.w(tag, msg) }"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="11"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun w(tag: String, msg: String, tr: Throwable?) { if (BuildConfig.DEBUG) Log.w(tag, msg, tr) }"
+        errorLine2="                                                                             ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="12"
+            column="78"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun e(tag: String, msg: String) { if (BuildConfig.DEBUG) Log.e(tag, msg) }"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="13"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        severity="Warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        category="Correctness:Messages"
+        priority="5"
+        summary="Logging call to Log instead of Timber"
+        explanation="Since Timber is included in the project, it is likely that calls to Log should instead be going to Timber."
+        errorLine1="    fun e(tag: String, msg: String, tr: Throwable?) { if (BuildConfig.DEBUG) Log.e(tag, msg, tr) }"
+        errorLine2="                                                                             ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/util/AppLog.kt"
+            line="14"
+            column="78"/>
+    </issue>
+
+    <issue
+        id="DataExtractionRules"
+        severity="Warning"
+        message="The attribute `android:allowBackup` is deprecated from Android 12 and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures backups and device transfers on Android 12 and higher."
+        category="Security"
+        priority="3"
+        summary="Missing data extraction rules"
+        explanation="Before Android 12, the attributes `android:allowBackup` and `android:fullBackupContent` were used to configure all forms of backup, including cloud backups, device-to-device transfers and adb backup.&#xA;&#xA;In Android 12 and higher, these attributes have been deprecated and will only apply to cloud backups. You should instead use the attribute `android:dataExtractionRules`, specifying an `@xml` resource that configures which files to back up, for cloud backups and for device-to-device transfers, separately. If your `minSdkVersion` supports older versions, you&apos;ll still want to specify an `android:fullBackupContent` resource if the default behavior is not right for your app."
+        url="https://developer.android.com/about/versions/12/backup-restore#xml-changes"
+        urls="https://developer.android.com/about/versions/12/backup-restore#xml-changes,https://goo.gle/DataExtractionRules"
+        errorLine1="        android:allowBackup=&quot;false&quot;"
+        errorLine2="                             ~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/AndroidManifest.xml"
+            line="50"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/AegisNavApplication.kt"
+            line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        tools:targetApi=&quot;31&quot;>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/AndroidManifest.xml"
+            line="56"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="            tools:targetApi=&quot;31&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/AndroidManifest.xml"
+            line="75"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/security/DatabaseKeyManager.kt"
+            line="65"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        val btConnectOk = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/MainActivity.kt"
+            line="708"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/PassiveBleScanner.kt"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="                val vibrationEffect = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/ScanService.kt"
+            line="360"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="                val vibrator = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/ScanService.kt"
+            line="363"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 31"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/ScanService.kt"
+            line="439"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 31. Merge all the resources in this folder into `mipmap-anydpi`."
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder.">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        severity="Warning"
+        message="This field leaks a context object"
+        category="Performance"
+        priority="6"
+        summary="Static Field Leaks"
+        explanation="A static field will leak contexts.&#xA;&#xA;Non-static inner classes have an implicit reference to their outer class. If that outer class is for example a `Fragment` or `Activity`, then this reference means that the long-running handler/loader/task will hold a reference to the activity which prevents it from getting garbage collected.&#xA;&#xA;Similarly, direct field references to activities and fragments from these longer running instances can cause leaks.&#xA;&#xA;ViewModel classes should never point to Views or non-application Contexts."
+        errorLine1="    @ApplicationContext private val context: Context"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/kotlin/com/aegisnav/app/routing/NavigationViewModel.kt"
+            line="48"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.purple_200` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;purple_200&quot;>#FFBB86FC&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/values/colors.xml"
+            line="3"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.purple_700` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;purple_700&quot;>#FF3700B3&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.teal_700` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;teal_700&quot;>#FF018786&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://d.android.com/r/studio-ui/designer/material/iconography) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-hdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://d.android.com/r/studio-ui/designer/material/iconography) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-mdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://d.android.com/r/studio-ui/designer/material/iconography) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://d.android.com/r/studio-ui/designer/material/iconography) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="IconLauncherShape"
+        severity="Warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
+        category="Usability:Icons"
+        priority="6"
+        summary="The launcher icon shape should use a distinct silhouette"
+        explanation="According to the Android Design Guide (https://d.android.com/r/studio-ui/designer/material/iconography) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        severity="Warning"
+        message="The application adaptive icon is missing a monochrome tag"
+        category="Usability:Icons"
+        priority="6"
+        summary="Monochrome icon is not defined"
+        explanation="If `android:roundIcon` and `android:icon` are both in your manifest, you must either remove the reference to `android:roundIcon` if it is not needed; or, supply the monochrome icon in the drawable defined by the `android:roundIcon` and `android:icon` attribute.&#xA;&#xA;For example, if `android:roundIcon` and `android:icon` are both in the manifest, a launcher might choose to use `android:roundIcon` over `android:icon` to display the adaptive app icon. Therefore, your themed application iconwill not show if your monochrome attribute is not also specified in `android:roundIcon`."
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        severity="Warning"
+        message="The application adaptive roundIcon is missing a monochrome tag"
+        category="Usability:Icons"
+        priority="6"
+        summary="Monochrome icon is not defined"
+        explanation="If `android:roundIcon` and `android:icon` are both in your manifest, you must either remove the reference to `android:roundIcon` if it is not needed; or, supply the monochrome icon in the drawable defined by the `android:roundIcon` and `android:icon` attribute.&#xA;&#xA;For example, if `android:roundIcon` and `android:icon` are both in the manifest, a launcher might choose to use `android:roundIcon` over `android:icon` to display the adaptive app icon. Therefore, your themed application iconwill not show if your monochrome attribute is not also specified in `android:roundIcon`."
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="/home/autopilot4131/.openclaw/workspace/dev-AegisNav/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+</issues>

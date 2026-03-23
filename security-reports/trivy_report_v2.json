@@ -1,0 +1,159 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.69.3"
+  },
+  "ReportID": "019cde81-6fed-7280-aef2-73b5998fdfc7",
+  "CreatedAt": "2026-03-11T16:05:50.70116518-04:00",
+  "ArtifactID": "sha256:2f6951f374a5aff85001a1937a0482fee15cbb58d3dd192b5d0963514d5a2331",
+  "ArtifactName": ".",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://tea.pasubis.com/o4o793uys/dev-AegisNav.git",
+    "Branch": "main",
+    "Commit": "38e0d08fa7b4b1aace6bb7d686f53044d88dae62",
+    "CommitMsg": "feat: in-app tile download, police→report history, fix sync clobber\n\nNew features:\n- DataDownloadScreen: pick state → download tiles/geocoder/routing from GitHub Releases\n- DataDownloadManager: OkHttp streaming, progress tracking, atomic writes, zip extraction\n- Integrated into Privacy Wizard (step 4) and Settings ('Download Map Data')\n- Storage warnings: amber \u003e2GB, red \u003e4GB with crash warning\n- Per-state remove button to delete downloaded data\n\nPolice sightings:\n- Filtered out of Threat History (shown in Report History instead)\n- Blue-themed PoliceDetectionItem cards with category, confidence %, coordinates\n- Blue strobe overlay kept for offline detection\n\nBuild fix:\n- syncSurveillanceData no longer auto-runs on build (Overpass timeouts clobber data)\n- Run manually: ./gradlew syncSurveillanceData\n- Speed cameras regenerated (1,616 features)",
+    "Author": "OpenClaw Agent \u003cagent@openclaw.ai\u003e",
+    "Committer": "OpenClaw Agent \u003cagent@openclaw.ai\u003e"
+  },
+  "Results": [
+    {
+      "Target": "backend/go.mod",
+      "Class": "lang-pkgs",
+      "Type": "gomod",
+      "Packages": [
+        {
+          "ID": "watchthewatcher/p2p",
+          "Name": "watchthewatcher/p2p",
+          "Identifier": {
+            "PURL": "pkg:golang/watchthewatcher/p2p",
+            "UID": "cb2106f9d594e217"
+          },
+          "Relationship": "root",
+          "DependsOn": [
+            "github.com/libp2p/go-libp2p-noise@v0.3.0",
+            "github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+            "github.com/libp2p/go-libp2p@v0.32.0"
+          ],
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p@v0.32.0",
+          "Name": "github.com/libp2p/go-libp2p",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p@v0.32.0",
+            "UID": "950f95ed489a0508"
+          },
+          "Version": "v0.32.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p-noise@v0.3.0",
+          "Name": "github.com/libp2p/go-libp2p-noise",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p-noise@v0.3.0",
+            "UID": "26cc7f69456df38f"
+          },
+          "Version": "v0.3.0",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        },
+        {
+          "ID": "github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+          "Name": "github.com/libp2p/go-libp2p-pubsub",
+          "Identifier": {
+            "PURL": "pkg:golang/github.com/libp2p/go-libp2p-pubsub@v0.9.3",
+            "UID": "a260b944a1be5060"
+          },
+          "Version": "v0.9.3",
+          "Relationship": "direct",
+          "AnalyzedBy": "gomod"
+        }
+      ]
+    },
+    {
+      "Target": "backend/Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 26,
+        "Failures": 2
+      },
+      "Misconfigurations": [
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0001",
+          "Title": "':latest' tag used",
+          "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+          "Message": "Specify a tag in the 'FROM' statement for image 'alpine'",
+          "Namespace": "builtin.dockerfile.DS001",
+          "Query": "data.builtin.dockerfile.DS001.deny",
+          "Resolution": "Add a tag to the image in the 'FROM' statement",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0001",
+          "References": [
+            "https://avd.aquasec.com/misconfig/ds-0001"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general",
+            "StartLine": 1,
+            "EndLine": 1,
+            "Code": {
+              "Lines": [
+                {
+                  "Number": 1,
+                  "Content": "FROM alpine:latest AS builder",
+                  "IsCause": true,
+                  "Annotation": "",
+                  "Truncated": false,
+                  "Highlighted": "\u001b[38;5;64mFROM\u001b[0m\u001b[38;5;37m alpine:latest AS builder\u001b[0m",
+                  "FirstCause": true,
+                  "LastCause": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "Type": "Dockerfile Security Check",
+          "ID": "DS-0001",
+          "Title": "':latest' tag used",
+          "Description": "When using a 'FROM' statement you should use a specific tag to avoid uncontrolled behavior when the image is updated.",
+          "Message": "Specify a tag in the 'FROM' statement for image 'alpine'",
+          "Namespace": "builtin.dockerfile.DS001",
+          "Query": "data.builtin.dockerfile.DS001.deny",
+          "Resolution": "Add a tag to the image in the 'FROM' statement",
+          "Severity": "MEDIUM",
+          "PrimaryURL": "https://avd.aquasec.com/misconfig/ds-0001",
+          "References": [
+            "https://avd.aquasec.com/misconfig/ds-0001"
+          ],
+          "Status": "FAIL",
+          "CauseMetadata": {
+            "Provider": "Dockerfile",
+            "Service": "general",
+            "StartLine": 15,
+            "EndLine": 15,
+            "Code": {
+              "Lines": [
+                {
+                  "Number": 15,
+                  "Content": "FROM alpine:latest",
+                  "IsCause": true,
+                  "Annotation": "",
+                  "Truncated": false,
+                  "Highlighted": "\u001b[38;5;64mFROM\u001b[0m\u001b[38;5;37m alpine:latest\u001b[0m",
+                  "FirstCause": true,
+                  "LastCause": true
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
