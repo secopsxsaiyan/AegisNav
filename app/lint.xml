@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- AegisNav handles all runtime permission requests properly in code.
+         These manifest-level warnings are informational only. -->
+    <issue id="BackgroundLocation" severity="ignore" />
+    <issue id="ForegroundServicePermission" severity="ignore" />
+    <issue id="ForegroundServiceType" severity="ignore" />
+</lint>

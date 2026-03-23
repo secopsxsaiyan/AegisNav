@@ -1,0 +1,802 @@
+OUI,MANUFACTURER
+000000,Xerox
+000001,Xerox
+000002,Xerox
+000003,Xerox
+000004,Xerox
+000005,Xerox
+000006,Xerox
+000007,Xerox
+000008,Xerox
+000009,Xerox
+00000A,Omron
+00000B,Matrix
+00000C,Cisco
+00000D,Fibermux
+00000E,Fujitsu
+00000F,NeXT
+000010,Sytek
+000011,Normerel
+000012,Information Technology
+000013,Camex
+000014,Netronix
+000015,Datapoint
+000016,Du Pont
+000017,Oracle
+000018,Webster
+000019,Applied Dynamics
+00001A,AMD
+00001B,Novell
+00001C,Bell Technologies
+00001D,Cabletron
+00001E,Xerox
+00001F,DSC
+000020,DIAB
+000021,SC&C
+000022,Telematics
+000023,ABB
+000024,Connect AS
+000025,Ramtek
+000026,SHA-KEN
+000027,Japan Radio
+000028,Prodigy
+000029,IMC
+00002A,TRW
+00002B,CRISP
+00002C,Autophon
+00002D,Symbios Logic
+00002E,Olicom
+00002F,TCL
+000030,VG Laboratory
+000031,Qpsx Communications
+000032,Colorado Spectrum
+000033,Egan Machinery
+000034,NETWORK RESOURCES
+000035,Spectragraphics
+000036,Intergraph
+000037,Norsk Data
+000038,CSS
+000039,Toshiba
+00003A,Chyron
+00003B,i Controls
+00003C,Auspex Systems
+00003D,AT&T
+00003E,Motorola
+00003F,Sequential Systems
+000040,ICL
+000041,ICL
+000042,CAM
+000043,FORTEC
+000044,Castelle
+000045,Emulex
+000046,IIMC
+000047,Nicolet Instruments
+000048,Seiko Epson
+000049,Apricot
+00004A,ADC Codenoll
+00004B,ICL
+00004C,NEC
+00004D,DDE
+00004E,Anritsu
+00004F,Logicraft
+000050,Radisys
+000051,Hob Electronic
+000052,ODS
+000053,Compucorp
+000054,Schneider Electric
+000055,AT&T
+000056,Doctor Design
+000057,Scitec
+000058,DLOG
+000059,Hellige
+00005A,SK Data
+00005B,Eltec Elektronic
+00005C,Elbit Systems
+00005D,CS Telecom
+00005E,IANA
+00005F,Sumitomo Electric
+000060,3Com
+000061,Gateway Communications
+000062,Bulldog
+000063,Barr Systems
+000064,Yokogawa Digital
+000065,Network General
+000066,Talaris Systems
+000067,Soft * Rite
+000068,Rosemount Controls
+000069,Arlan Communications
+00006A,Computerm
+00006B,MIPS
+00006C,Private
+00006D,Case Technology
+00006E,ISEP
+00006F,Madge Networks
+000070,HCL
+000071,Ardent
+000072,Miniware
+000073,DuPont
+000074,Ricoh
+000075,Dansk
+000076,Abekas Video Systems
+000077,INTERPHASE
+000078,Labtam
+000079,Networth
+00007A,Ardent
+00007B,Research Machines
+00007C,Ampere
+00007D,Oracle
+00007E,Clustrix
+00007F,Linotronic
+000080,XIOS
+000081,Synoptics
+000082,Lectra Systemes
+000083,Tadpole Technology
+000084,ADI Systems
+000085,Canon
+000086,Megahertz
+000087,Hitachi
+000088,Towercom
+000089,Cayman Systems
+00008A,Datahouse Information
+00008B,MDL Communications
+00008C,Raycom
+00008D,XYlogics
+00008E,Solbourne
+00008F,Chipcom
+000090,Retix
+000091,Anritsu
+000092,Cogent Data Technologies
+000093,Proteon
+000094,Asante Technologies
+000095,Sony
+000096,Iserver
+000097,Epoch
+000098,CrossComm
+000099,MTI
+00009A,RC International
+00009B,Lockheed
+00009C,Rolm
+00009D,Locus Computing
+00009E,Escom
+00009F,Ameriquest Technologies
+0000A0,Sanyo Electric
+0000A1,Marquette Electronics
+0000A2,Wellfleet Communications
+0000A3,Network Application Technology
+0000A4,Acorn Computers
+0000A5,Compatible Systems
+0000A6,Network General
+0000A7,Network Computing Devices
+0000A8,Stratus Computer
+0000A9,Network Systems
+0000AA,Xerox
+0000AB,Synthesis
+0000AC,Conware Computer Consulting
+0000AD,Rose Electronics
+0000AE,Rincon Research
+0000AF,Cray Research
+0000B0,RND Networks
+0000B1,Alpha Microsystems
+0000B2,SNET
+0000B3,Cimlinc
+0000B4,Edimax Technology
+0000B5,Datability Software Systems
+0000B6,Micro-matic Research
+0000B7,Suffolk County
+0000B8,Sysnet
+0000B9,Meret Communications
+0000BA,Sirius Systems
+0000BB,TRI Data Systems
+0000BC,Allen-Bradley
+0000BD,Syntactic Systems
+0000BE,Pyramid Technology
+0000BF,Spur Products
+0000C0,Western Digital
+0000C1,Olicom
+0000C2,InFront
+0000C3,Hasler
+0000C4,WAFERSCALE Integration
+0000C5,Farallon Computing
+0000C6,HP
+0000C7,Arix
+0000C8,Altos Computer Systems
+0000C9,Emulex
+0000CA,LANcad
+0000CB,CERN
+0000CC,Micro System
+0000CD,Industrial Networking
+0000CE,Memorex Telex
+0000CF,Communications Machinery
+0000D0,Develcon Electronics
+0000D1,Adaptec
+0000D2,SBE
+0000D3,Wang Laboratories
+0000D4,PureData
+0000D5,Micrognosis
+0000D6,Punch Line
+0000D7,Dartmouth College
+0000D8,Novell
+0000D9,Quantel
+0000DA,Atex
+0000DB,British Telecom
+0000DC,Hayes Microcomputer Products
+0000DD,Gould
+0000DE,Unifi Communications
+0000DF,Bell & Howell
+0000E0,Danpex
+0000E1,Leybold
+0000E2,Acer
+0000E3,Integrated Micro Products
+0000E4,In4tel
+0000E5,Sigmex
+0000E6,Aptor Produits
+0000E7,Eden Sistemas de Computacao
+0000E8,Accton Technology
+0000E9,ISICAD
+0000EA,Upnod AB
+0000EB,Matsushita Electric Works
+0000EC,Microchip Technology
+0000ED,April
+0000EE,Network Designers
+0000EF,Alantec
+0000F0,Samsung
+0000F1,DRL
+0000F2,Spider Communications
+0000F3,Gandalf Systems
+0000F4,Allied Telesis
+0000F5,Diamond Microsystems
+0000F6,Optical Networks
+0000F7,Youth Keep Enterprise
+0000F8,DEC
+0000F9,Whittaker
+0000FA,Xerox
+0000FB,Rechner zur Kommunikation
+0000FC,Meiko
+0000FD,High Level Hardware
+0000FE,Annex Communications
+0000FF,Camtec Electronics
+000102,BBN
+001122,Cimsys
+001560,Intel
+0017F2,Apple
+001B63,Apple
+001CB3,Apple
+001D4F,Apple
+001E52,Apple
+001EC2,Apple
+001F5B,Apple
+001FF3,Apple
+002241,Apple
+0023DF,Apple
+0024BE,Apple
+002608,Apple
+00264A,Apple
+002713,Apple
+002863,Apple
+003065,Apple
+003EE1,Apple
+004096,Apple
+0050E4,Apple
+006D52,Apple
+00C610,Apple
+04154D,Apple
+041E64,Apple
+04484D,Apple
+048D38,Apple
+04F7E4,Apple
+082E5F,Apple
+083D88,Apple
+0C3E9F,Apple
+0C740A,Apple
+0C7726,Apple
+0CE7E4,Apple
+10402F,Apple
+106F3F,Apple
+1093E9,Apple
+10DDB1,Apple
+10DDEE,Apple
+142F5B,Apple
+14998F,Apple
+1C1AC0,Apple
+1C5CF2,Apple
+200165,Apple
+205AB2,Apple
+2470C7,Apple
+24E31A,Apple
+28CFE9,Apple
+2C1F23,Apple
+2C61F6,Apple
+34363B,Apple
+34A395,Apple
+34C059,Apple
+38B54D,Apple
+38CADA,Apple
+3C0754,Apple
+3C15C2,Apple
+40D32D,Apple
+44D884,Apple
+48437C,Apple
+48A195,Apple
+4CA6E9,Apple
+500578,Apple
+5065D2,Apple
+5056BE,Apple
+54724F,Apple
+549F13,Apple
+58B035,Apple
+58D35B,Apple
+5C3586,Apple
+5C8D4E,Apple
+5CF938,Apple
+60D9C7,Apple
+6C19C0,Apple
+6C96CF,Apple
+6CDDA8,Apple
+705681,Apple
+74E1B6,Apple
+7831C1,Apple
+7C6D62,Apple
+7CF05F,Apple
+803832,Apple
+8863DF,Apple
+88C663,Apple
+8CAAB5,Apple
+8C7C92,Apple
+8C8590,Apple
+90B21F,Apple
+98D6BB,Apple
+9CF387,Apple
+A00BBA,Apple
+A01867,Apple
+A060A6,Apple
+A4B197,Apple
+A4C361,Apple
+A8667F,Apple
+A88695,Apple
+AC29B0,Apple
+AC3C0B,Apple
+AC61EA,Apple
+B0347B,Apple
+B41286,Apple
+B465DF,Apple
+B819EC,Apple
+BC3BAF,Apple
+BC4CC4,Apple
+BCF5AC,Apple
+C018A9,Apple
+C089F5,Apple
+C41200,Apple
+C4618B,Apple
+C82A14,Apple
+CC29F5,Apple
+CC785D,Apple
+D013FD,Apple
+D03311,Apple
+D0E140,Apple
+D4619D,Apple
+D83062,Apple
+D89695,Apple
+D8B190,Apple
+D8CF9C,Apple
+DC2B61,Apple
+DCDE35,Apple
+E0B52D,Apple
+E0C767,Apple
+E0F5C6,Apple
+E46F13,Apple
+E8802E,Apple
+EC852A,Apple
+EC8D28,Apple
+ECADC1,Apple
+F0B479,Apple
+F0CBB1,Apple
+F4F15A,Apple
+F81EDF,Apple
+F86A05,Apple
+FC253F,Apple
+000440,Cisco
+001143,Cisco
+00E014,Cisco
+0060092C,Cisco
+0060E8,Cisco
+00902A,Cisco
+00902B,Cisco
+00902C,Cisco
+00902D,Cisco
+00A06E,Cisco
+00A0C9,Cisco
+00A0F8,Cisco
+0010F6,Cisco
+001E13,Cisco
+001E6B,Cisco
+0019E7,Cisco
+001B0D,Cisco
+001B2A,Cisco
+001B54,Cisco
+001B67,Cisco
+001B8F,Cisco
+001CB3,Cisco
+0021A0,Cisco
+002155,Cisco
+002186,Cisco
+0021BC,Cisco
+0021BE,Cisco
+0024139,Cisco
+001117,Cisco
+0011BB,Cisco
+0011BC,Cisco
+001201,Cisco
+001202,Cisco
+001204,Cisco
+001217,Cisco
+00125F,Cisco
+0012DA,Cisco
+001301,Cisco
+001337,Cisco
+00133B,Cisco
+00147B,Cisco
+001499,Cisco
+0014A9,Cisco
+001706,Cisco
+001710,Cisco
+001B0C,Cisco
+0050A2,Cisco
+005014,Cisco
+00E0F9,Cisco
+0004E2,Ubiquiti
+0418D6,Ubiquiti
+04186E,Ubiquiti
+0418D6,Ubiquiti
+083A5A,Ubiquiti
+1017EA,Ubiquiti
+142D27,Ubiquiti
+18E829,Ubiquiti
+241B7A,Ubiquiti
+243A98,Ubiquiti
+247527,Ubiquiti
+28704E,Ubiquiti
+2A3186,Ubiquiti
+2E1A37,Ubiquiti
+3A7E7C,Ubiquiti
+3C22FB,Ubiquiti
+44D9E7,Ubiquiti
+4CCC0C,Ubiquiti
+601C3E,Ubiquiti
+60A4AA,Ubiquiti
+60EFB0,Ubiquiti
+6CB527,Ubiquiti
+6CFD9C,Ubiquiti
+748BCD,Ubiquiti
+78EB14,Ubiquiti
+7C47E5,Ubiquiti
+80825A,Ubiquiti
+A000EB,Ubiquiti
+ACE24F,Ubiquiti
+B497AB,Ubiquiti
+B4FBE4,Ubiquiti
+BCDCE8,Ubiquiti
+C0A5E8,Ubiquiti
+D0219B,Ubiquiti
+D86CE9,Ubiquiti
+DC9FDB,Ubiquiti
+E0D9E3,Ubiquiti
+E296BC,Ubiquiti
+E8B28B,Ubiquiti
+EC3500,Ubiquiti
+F09FC2,Ubiquiti
+F4E2C6,Ubiquiti
+FCECda,Ubiquiti
+001A1E,Aruba Networks
+001A8F,Aruba Networks
+0030B3,Aruba Networks
+001CB3,Aruba Networks
+20A600,Aruba Networks
+24DE C6,Aruba Networks
+40E3D6,Aruba Networks
+6CB3D5,Aruba Networks
+70703C,Aruba Networks
+94B40,Aruba Networks
+A44050,Aruba Networks
+00239E,Netgear
+001E2A,Netgear
+00224B,Netgear
+002639,Netgear
+00265A,Netgear
+00264B,Netgear
+00A0C5,Netgear
+1C1AC0,Netgear
+28C68E,Netgear
+2CB05D,Netgear
+348956,Netgear
+3AA5F6,Netgear
+3E7A00,Netgear
+40167E,Netgear
+44940B,Netgear
+4C60DE,Netgear
+5C4CA9,Netgear
+6045CB,Netgear
+64D154,Netgear
+6CC217,Netgear
+74447A,Netgear
+9C3DCF,Netgear
+A040A0,Netgear
+A42BB0,Netgear
+B03956,Netgear
+B0B982,Netgear
+C04A00,Netgear
+C0FF28,Netgear
+C4040A,Netgear
+C48508,Netgear
+DC0B1A,Netgear
+E06995,Netgear
+F8C091,Netgear
+F8E903,Netgear
+54A751,TP-Link
+14CC20,TP-Link
+1C487E,TP-Link
+24E8E8,TP-Link
+50465D,TP-Link
+5C63BF,TP-Link
+60E327,TP-Link
+64704C,TP-Link
+70AF24,TP-Link
+7C39C4,TP-Link
+8CFAB1,TP-Link
+9099C6,TP-Link
+98DAC4,TP-Link
+9CD643,TP-Link
+A0F3C1,TP-Link
+A42BB0,TP-Link
+AC15A2,TP-Link
+B0487A,TP-Link
+B4B024,TP-Link
+B8F009,TP-Link
+BC46E3,TP-Link
+C025E9,TP-Link
+C4E984,TP-Link
+E84840,TP-Link
+EC08CE,TP-Link
+F4EC38,TP-Link
+00259C,Samsung
+001215,Samsung
+001632,Samsung
+001C62,Samsung
+002092,Samsung
+0024E9,Samsung
+002566,Samsung
+002567,Samsung
+002599,Samsung
+0025E1,Samsung
+002638,Samsung
+00264D,Samsung
+001F35,Samsung
+001E7D,Samsung
+00239F,Samsung
+0021D1,Samsung
+0021D2,Samsung
+0021D3,Samsung
+0023DF,Samsung
+A00750,Samsung
+C067B5,Samsung
+D476EA,Samsung
+E87D60,Samsung
+F4426B,Samsung
+001B44,LG Electronics
+002483,LG Electronics
+00E091,LG Electronics
+1C6E5A,LG Electronics
+3CA36C,LG Electronics
+4CCBE3,LG Electronics
+5C49EB,LG Electronics
+A8390A,LG Electronics
+B44BD6,LG Electronics
+C4357C,LG Electronics
+001E67,Sony
+001AAA,Sony
+001A80,Sony
+0020F1,Sony
+002345,Sony
+002413,Sony
+0024EF,Sony
+00259E,Sony
+001A3D,Sony
+18002D,Sony
+1C8B7B,Sony
+2082C0,Sony
+30F9ED,Sony
+3CABA9,Sony
+50BB93,Sony
+0090CC,Intel
+001111,Intel
+001302,Intel
+001312,Intel
+001486,Intel
+0016EA,Intel
+0016EB,Intel
+001B21,Intel
+001DB3,Intel
+001E64,Intel
+001E67,Intel
+001F3B,Intel
+002170,Intel
+00219B,Intel
+0021D8,Intel
+002348,Intel
+0023149,Intel
+0023AE,Intel
+0024D6,Intel
+00261A,Intel
+002622,Intel
+002638,Intel
+001388,Motorola
+00156F,Motorola
+001607,Motorola
+001896,Motorola
+00185A,Motorola
+001A6C,Motorola
+001BD3,Motorola
+001C17,Motorola
+001C56,Motorola
+001CF0,Motorola
+001D6A,Motorola
+00604C,Motorola
+00606D,Motorola
+006070,Motorola
+006096,Motorola
+00609A,Motorola
+0060AC,Motorola
+006A8E,Motorola
+007048,Motorola
+00703A,Motorola
+0070CF,Motorola
+00726D,Motorola
+00E0DE,Motorola
+00E0FC,Motorola
+009002,Motorola
+00906E,Motorola
+009069,Motorola
+000C29,VMware
+000D3A,Microsoft
+000E0C,Motorola
+006D52,Google
+08606E,Google
+0CEE6F,Google
+1C6A2A,Google
+3C5AB4,Google
+543527,Google
+5CF6DC,Google
+70B3D5,Google
+94EB2C,Google
+A47733,Google
+E4F0E8,Google
+00139D,Huawei
+001E10,Huawei
+002568,Huawei
+00259E,Huawei
+0027E3,Huawei
+002802,Huawei
+002824,Huawei
+0028CD,Huawei
+00F81C,Huawei
+00FCBA,Huawei
+040BF3,Huawei
+048756,Huawei
+0C37DC,Huawei
+10BE03,Huawei
+10C61F,Huawei
+10D07A,Huawei
+10FF25,Huawei
+142A67,Huawei
+18B9F7,Huawei
+1C6758,Huawei
+201D03,Huawei
+20A680,Huawei
+20F3A3,Huawei
+283C08,Huawei
+289EFC,Huawei
+2C9D1E,Huawei
+2CAB25,Huawei
+2CE878,Huawei
+305A3A,Huawei
+34B354,Huawei
+34DB7B,Huawei
+382260,Huawei
+3C4703,Huawei
+3CEA4F,Huawei
+4007B4,Huawei
+4033C2,Huawei
+4099DD,Huawei
+40A8F0,Huawei
+48FD8E,Huawei
+4CC155,Huawei
+4CEAA8,Huawei
+4CF95D,Huawei
+5014C2,Huawei
+50A52A,Huawei
+54511B,Huawei
+5489E1,Huawei
+58605F,Huawei
+5C4CA9,Huawei
+5C8A38,Huawei
+5CF96A,Huawei
+606EE8,Huawei
+607B8E,Huawei
+60DE44,Huawei
+6416F0,Huawei
+649E31,Huawei
+64DA77,Huawei
+688FF7,Huawei
+6C8D6F,Huawei
+70724E,Huawei
+70A815,Huawei
+7429AF,Huawei
+74882A,Huawei
+74A0B8,Huawei
+7828CA,Huawei
+788CB5,Huawei
+78D752,Huawei
+7CA23E,Huawei
+80B686,Huawei
+80FB06,Huawei
+84A45A,Huawei
+8CAAB5,Huawei
+8CF097,Huawei
+90EFFE,Huawei
+941DD9,Huawei
+982DBF,Huawei
+9864A0,Huawei
+9869D9,Huawei
+9C7B7E,Huawei
+9C7E52,Huawei
+A04E0A,Huawei
+A0847D,Huawei
+A454B7,Huawei
+A46CE2,Huawei
+A806C8,Huawei
+ACBD93,Huawei
+ACE87B,Huawei
+B4430D,Huawei
+B4CD27,Huawei
+B808D7,Huawei
+BC7735,Huawei
+BC9C31,Huawei
+C4072F,Huawei
+C41390,Huawei
+C49A02,Huawei
+C4CDA4,Huawei
+C86A9D,Huawei
+CCCC81,Huawei
+D02740,Huawei
+D065CA,Huawei
+D0FF98,Huawei
+D4201A,Huawei
+D43E52,Huawei
+D44BE5,Huawei
+D4557B,Huawei
+D48B6A,Huawei
+D47BB1,Huawei
+D464B8,Huawei
+D88690,Huawei
+D8C7C8,Huawei
+DC727C,Huawei
+DCA232,Huawei
+DCC24D,Huawei
+E00C7F,Huawei
+E01AB5,Huawei
+E09718,Huawei
+E0A3B1,Huawei
+E4C2D1,Huawei
+E87C01,Huawei
+EC1072,Huawei
+EC23B2,Huawei
+ECA866,Huawei
+F09238,Huawei
+F0E0DC,Huawei
+F40B57,Huawei
+F438EE,Huawei
+F46DE2,Huawei
+F4804F,Huawei
+F4911E,Huawei
+F4A778,Huawei
+F8012E,Huawei
+FC3FDB,Huawei
