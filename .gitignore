@@ -80,8 +80,6 @@ STATE/
 # Dev artifact — partial TN test data, not a production asset
 app/src/main/assets/alpr_tn.geojson
 
-# Security audit reports are tracked in dev (see security-reports/)
-# but MUST be excluded from release mirror via release .gitignore
 tools/output/*.zip
 tools/output_old/
 tools/output/
