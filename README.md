@@ -23,6 +23,26 @@ This is the official open-source repository for AegisNav. The application runs i
 | ⚠️ **OFFLINE MODE**             | All maps, routing, search, and detection features operate completely offline after initial data download.                                                                                                                                                                                                                                                                                                                             |
 | ⚠️ **INDEPENDENT**              | Open-source project with no affiliation to any law enforcement agency, camera vendor, or government entity.                                                                                                                                                                                                                                                                                                                           |
 | ⚠️ **WIRELESS SCANNING**        | This app performs only passive, receive-only scanning of public Bluetooth and WiFi signals; it does not jam, interfere with, spoof, or actively disrupt any devices or networks, which would be prohibited under federal law (e.g., 47 U.S.C. § 302a).                                                                                                                                                                                |
+---
+
+## Pictures
+| <img width="565" height="1238" alt="AegisNav_Map_View_Dark" src="https://github.com/user-attachments/assets/777cb007-6326-4cb9-bceb-affb0e748fd4" /> | <img width="561" height="1120" alt="AegisNav_Map_View_Light" src="https://github.com/user-attachments/assets/56bf66f0-723c-49ef-8d2f-ab95ba8210f5" /> |
+|-------------------------------------|-------------------------------------|
+ 
+| <img width="563" height="1121" alt="AegisNav_Nav_View_0" src="https://github.com/user-attachments/assets/26fbb025-2539-4694-a3f5-79b76dd381f3" /> | <img width="559" height="1124" alt="AegisNav_Nav_View_1" src="https://github.com/user-attachments/assets/4b46b998-26a9-4315-b934-8f08ba12a7ba" /> |
+|-------------------------------------|-------------------------------------|
+
+| <img width="557" height="952" alt="AegisNav_Map_Select" src="https://github.com/user-attachments/assets/b9d0a7e7-93fb-4926-a8db-a9bfe9584833" /> | <img width="461" height="985" alt="AegisNav_Map_Download" src="https://github.com/user-attachments/assets/97c0faac-342a-436b-8933-33e1d88fd567" /> |
+|-------------------------------------|-------------------------------------|
+
+| <img width="562" height="998" alt="AegisNav_Threat_Settings_0" src="https://github.com/user-attachments/assets/a53353d7-dac6-44fd-932b-1a65c144c5c7" /> | <img width="562" height="991" alt="AegisNav_Threat_Settings_1" src="https://github.com/user-attachments/assets/9af5b604-505d-4de6-a14f-02c0914cab39" /> | <img width="560" height="1005" alt="AegisNav_Threat_Settings_2" src="https://github.com/user-attachments/assets/c1e90a46-cd9a-4af6-9e96-5621934fd183" /> |
+|-------------------------------------|-------------------------------------|-------------------------------------|
+
+| <img width="560" height="1119" alt="AegisNav_routes" src="https://github.com/user-attachments/assets/58118d77-16e8-4a0b-b0a6-54420d45b5fa" /> | <img width="560" height="1117" alt="AegisNav_fastest" src="https://github.com/user-attachments/assets/ad5627c3-1ab4-4fb2-b782-4d24422dd31f" /> | <img width="561" height="1115" alt="AegisNav_shortest" src="https://github.com/user-attachments/assets/26d295a3-e12a-4a6f-ab14-1e26f350e4ac" /> | <img width="561" height="1123" alt="AegisNav_avoid_ALPR_loading" src="https://github.com/user-attachments/assets/ee0f3d19-053a-46b5-b2f6-1a778e5b9625" /> | <img width="562" height="1124" alt="AegisNav_avoid_ALPR" src="https://github.com/user-attachments/assets/af1db392-ea00-48d8-b14e-a2aa7bd9f44d" /> |
+|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
+
+| <img width="567" height="1239" alt="AegisNav_Threat_History_Tracker" src="https://github.com/user-attachments/assets/9cdef896-47e3-48af-8246-1e56b8112ac3" /> | <img width="566" height="1234" alt="AegisNav_Threat_History_Tracker_Cont" src="https://github.com/user-attachments/assets/fdf459b6-c9ec-4e53-beea-2398f83196cc" /> | <img width="565" height="1239" alt="AegisNav_Threat_History_Coordinated_Movement" src="https://github.com/user-attachments/assets/c976e0fd-faa3-4d16-9aa0-c7d1262c199e" /> | <img width="559" height="975" alt="AegisNav_Threat_History_ignore_alert" src="https://github.com/user-attachments/assets/75242043-d5b3-4e67-b3ca-057d5afb06bc" /> | <img width="567" height="1240" alt="AegisNav_Report_History_Police_Equipment" src="https://github.com/user-attachments/assets/fc343491-1f61-4142-9e52-19acca36798f" /> |
+|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
 
 ---
 
@@ -149,7 +169,7 @@ No GPL, LGPL, or AGPL code is used. All third-party libraries use permissive lic
 * | [Jackson](https://github.com/FasterXML/jackson) (via GraphHopper)                                               | Apache 2.0   |
 * | [Apache Commons IO/Lang3](https://commons.apache.org) (via GraphHopper)                                         | Apache 2.0   |
 * | [Bouncy Castle](https://www.bouncycastle.org) (via Tink)                                                        | MIT          |
-*
+
 ### Data Sources
 
 * | Source | License | Usage |
@@ -166,5 +186,7 @@ See [PRIVACY_POLICY.md](PRIVACY_POLICY.md).
 ---
 
 ## Contributing / Issues
+
+<a href="https://www.buymeacoffee.com/aegisnav" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 Bug reports and feature requests: **https://github.com/secopsxsaiyan/AegisNav/issues**
