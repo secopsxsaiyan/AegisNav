@@ -108,7 +108,7 @@ This is the official open-source repository for AegisNav. The application runs i
 • SQLCipher encrypted database (AES-256)
 • Tink encrypted DataStore (AES-256-GCM, Android Keystore)
 • FLAG_SECURE on MainActivity (no screenshots)
-• MD5 checksum verification for all downloaded files (stored on github)
+• SHA256 checksum verification for all downloaded files (stored on github)
 • allowBackup disabled
 • No world-readable files
 • Zip bomb + zip slip protection
